@@ -1,0 +1,15 @@
+@import 'custom-style/colors';
+@import 'custom-style/spacing';
+@import 'custom-style/shared-styles';
+@import 'custom-style/typography';
+@import 'custom-style/icons';
+@import 'custom-style/buttons';
+@import 'custom-style/forms';
+
+
+// Styles pages in folder page
+@import 'custom-style/pages/main/blocks/hero-image/hero-image.scss';
+
+// Parts folder reusable
+@import 'custom-style/pages/parts/header/header.scss';
+@import 'custom-style/pages/parts/footer/footer.scss';

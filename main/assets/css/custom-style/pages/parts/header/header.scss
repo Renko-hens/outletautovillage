@@ -1,0 +1,32 @@
+// header
+.main-header {
+  padding: 0 24px;
+}
+
+.main-header__container {
+  max-width: 940px;
+  max-height: 96px;
+  padding: 12px 0;
+}
+
+.main-header__wrapper-pictures {
+  min-width: 112px;
+  max-height: 72px;
+  margin-right: 32px;
+}
+
+.main-header__navigation {
+  flex-basis: calc(60% - 112px);
+}
+
+.navigation__item {
+  margin-right: 16px;
+}
+
+.main-header__information {
+  flex-basis: 40%;
+}
+
+.main-header__menu-block {
+  display: none;
+}
