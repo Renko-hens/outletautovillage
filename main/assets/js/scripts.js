@@ -235,3 +235,23 @@ Math.easeInOutQuad = function (t, b, c, d) {
 	t--;
 	return -c/2 * (t*(t-2) - 1) + b;
 };
+// File#: _1_anim-menu-btn
+(function() {
+	var menuBtns = document.getElementsByClassName('js-anim-menu-btn');
+	if( menuBtns.length > 0 ) {
+		for(var i = 0; i < menuBtns.length; i++) {(function(i){
+			initMenuBtn(menuBtns[i]);
+		})(i);}
+
+		function initMenuBtn(btn) {
+			btn.addEventListener('click', function(event){	
+				event.preventDefault();
+				var status = !Util.hasClass(btn, 'anim-menu-btn--state-b');
+				Util.toggleClass(btn, 'anim-menu-btn--state-b', status);
+				// emit custom event
+				var event = new CustomEvent('anim-menu-btn-clicked', {detail: status});
+				btn.dispatchEvent(event);
+			});
+		};
+	}
+}());

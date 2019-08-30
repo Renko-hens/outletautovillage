@@ -6,7 +6,7 @@
 
 :root {
   // font family
-  --font-primary: sans-serif;
+  --font-primary: 'Montserrat';
 
   // body font size
   --text-base-size: 1em;
@@ -75,4 +75,13 @@ mark {
 .article.text-component { // e.g., blog posts
   --line-height-multiplier: 1.13; // increase article line-height
   --text-vspace-multiplier: 1.2; // increase vertical spacing
+}
+
+.title {
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-primary);
+
+  margin: 0 auto;
 }
