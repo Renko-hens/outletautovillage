@@ -1,14 +1,26 @@
 .reviews {
-    padding: 76px 0;
+    padding: 48px 0;
     // 
     background-color: #F5F6F8;
 }
 
+@include breakpoint(sm) {
+  .reviews {
+    padding: 76px 0;
+  }
+}
+
 .reviews__title {
     text-align: left;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 800;
     color: var(--color-black);
+}
+
+@include breakpoint(sm) {
+  .reviews__title {
+    font-size: 32px;
+}
 }
 
 .reviews__blocks {

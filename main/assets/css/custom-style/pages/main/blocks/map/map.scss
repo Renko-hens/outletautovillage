@@ -1,8 +1,21 @@
 .map {
     position: relative;
+    // // 
+    // display: none;
+}
+
+.map__element-block {
+  display: none;
+}
+
+@include breakpoint(sm) {
+  .map__element-block {
+      display: block;
+  }
 }
 
 .map__container {
+  // 
     background-color: #FFC108;
     padding: 24px;
 }
@@ -35,14 +48,30 @@
     }
 }
 
-.map__element-block {
-    display: none;
+.map__title {
+  text-transform: uppercase;
+  
+  font-size: 24px;
+  font-weight: 800;
 }
 
 @include breakpoint(sm) {
-    .map__element-block {
-        display: block;
-    }
+  .map__title {
+      font-size: 32px;
+  }
+}
+
+.map__description {
+  margin-top: 16px;
+
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@include breakpoint(sm) {
+  .map__description {
+      font-size: 24px;
+  }
 }
 
 .map__element-link {
@@ -72,32 +101,5 @@
 @include breakpoint(sm) {
     .map-element__link{
         display: none;
-    }
-}
-
-
-.map__title {
-    text-transform: uppercase;
-    
-    font-size: 24px;
-    font-weight: 800;
-}
-
-@include breakpoint(sm) {
-    .map__title {
-        font-size: 32px;
-    }
-}
-
-.map__description {
-    margin-top: 32px;
-
-    font-size: 16px;
-    font-weight: 500;
-}
-
-@include breakpoint(sm) {
-    .map__description {
-        font-size: 24px;
     }
 }
