@@ -6,25 +6,50 @@
     min-width: 100%;
 }
 
-.location {
-    background-image: url("/assets/img/location.svg");
-    background-repeat: no-repeat;
-    background-size: 25%;
-    background-position: left 3% center;
-}
-
 .property__block {
     max-width: 640px;
 }
 
-.property--reverse {
-    align-self: flex-start;
+.responsibility {
+    // 
+    background-color: #0C308C;
+    // 
+    color: var(--color-white);
+}
+
+// Меняем цвет заголовку
+.property--reverse .property__title {
+    // 
+    color: var(--color-white);
+}
+
+@include breakpoint(xs) {
+    //  Наследственность для блока  чтобы они не менялись местами на мобилке
+    .property--reverse .property__picture {
+    order: 1;
+    }
+
+    .property--reverse .property__block {
+    order: 2;
+    }
+}
+
+@include breakpoint(sm) {
+    //  Наследственность для блока  чтобы они поменялись местами
+    .property--reverse .property__picture {
+        order: 2;
+    }
+
+    .property--reverse .property__block {
+        order: 1;
+    }
 }
 
 .property__title {
     font-size: 32px;
     text-align: left;
     font-weight: 800;
+    // 
     color: var(--color-black);
 }
 

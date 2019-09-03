@@ -1,0 +1,103 @@
+.map {
+    position: relative;
+}
+
+.map__container {
+    background-color: #FFC108;
+    padding: 24px;
+}
+
+@media(min-width: 570px) and (max-width: 767px) {
+    .map__container {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        display: block;
+        max-width: 457px;
+        padding: 48px 32px 56px 32px;
+        transform: translateX(85%) translateY(-50%);
+        // 
+        background-color: #FFC108;
+    }
+}
+
+@include breakpoint(sm) {
+    .map__container {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        display: block;
+        max-width: 457px;
+        padding: 64px 48px 72px 48px;
+        transform: translateX(100%) translateY(-50%);
+        // 
+        background-color: #FFC108;
+    }
+}
+
+.map__element-block {
+    display: none;
+}
+
+@include breakpoint(sm) {
+    .map__element-block {
+        display: block;
+    }
+}
+
+.map__element-link {
+    display: block;
+}
+
+@media (min-width: 570px){
+    .map__element-link {
+        display: none;
+    }
+}
+
+.map__element-image {
+    min-width: 100%;
+}
+
+.map-element__link{
+    display: none;
+}
+
+@media (min-width: 570px){
+    .map-element__link{
+        display: block;
+    }
+}
+
+@include breakpoint(sm) {
+    .map-element__link{
+        display: none;
+    }
+}
+
+
+.map__title {
+    text-transform: uppercase;
+    
+    font-size: 24px;
+    font-weight: 800;
+}
+
+@include breakpoint(sm) {
+    .map__title {
+        font-size: 32px;
+    }
+}
+
+.map__description {
+    margin-top: 32px;
+
+    font-size: 16px;
+    font-weight: 500;
+}
+
+@include breakpoint(sm) {
+    .map__description {
+        font-size: 24px;
+    }
+}
