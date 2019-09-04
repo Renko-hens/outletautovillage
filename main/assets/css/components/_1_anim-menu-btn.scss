@@ -29,7 +29,7 @@ Descr: A menu button w/ a morphing icon
   font-size: var(--anim-menu-btn-icon-size);
   width: 1em;
   height: var(--anim-menu-btn-icon-stroke);
-  color: var(--color-contrast-high); // icon color
+  color: var(--color-primary); // icon color
   background-image: linear-gradient(currentColor, currentColor);
   background-repeat: no-repeat;
   transform: scale(1);
