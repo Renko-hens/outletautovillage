@@ -37,6 +37,7 @@
 
 .opportunities__link {
   display: block;
+  position: relative;
   padding: 24px;
 
   background-color: var(--color-white);
@@ -69,94 +70,38 @@
 }
 
 @media (min-width: 1024px) {
-  // Анимация при убирания мышки с ховера
+  // Анимация при наведения мышки
   .opportunities__link:nth-child(1) {
     background-image: url("/assets/img/yellow_o.svg");
-    background-position: -600px center;
+    background-position: -420px center;
     background-repeat: no-repeat;
     background-size: cover;
 
-    animation-name: push-left-out;
-    animation-duration: 0.5s;
-    animation-direction: alternate;
+    transition: background-position 0.5s;
   }
 
-  @keyframes push-left-out {
-    from {
-      background-position: -150px center;
-    }
-
-    to {
-      background-position: -600px center;
-    }
-  }
-
-  // Анимация при наведения мышки
   .opportunities__link:hover:nth-child(1) {
-    background-image: url("/assets/img/yellow_o.svg");
     background-position: -150px center;
-    background-repeat: no-repeat;
-    background-size: cover;
 
-    animation-name: push-left-in;
-    animation-duration: 0.5s;
-    animation-direction: alternate;
-  }
-
-  @keyframes push-left-in {
-    from {
-      background-position: -420px center;
-    }
-
-    to {
-      background-position: -150px center;
-    }
+    transition: background-position 0.5s;
   }
 }
 
 @media (min-width: 1024px) {
   // Анимация при убирания мышки с ховера
   .opportunities__link:nth-child(2) {
-    background-image: url("/assets/img/yellow.svg");
+    background-image: url("/assets/img/yellow_a.svg");
     background-position: center 340px;
     background-repeat: no-repeat;
     background-size: 100%;
 
-    animation-name: push-up-out;
-    animation-duration: 0.5s;
-    animation-direction: alternate;
+    transition: background-position 0.5s;
   }
 
-  @keyframes push-up-out {
-    from {
-      background-position: 0 30px;
-    }
-
-    to {
-      background-position: center 340px;
-    }
-  }
-
-  // Анимация при наведения мышки
   .opportunities__link:hover:nth-child(2) {
-    background-image: url("/assets/img/yellow.svg");
     background-position: 0 30px;
-    background-repeat: no-repeat;
-    background-size: 100%;
 
-    animation-name: push-up-in;
-    animation-duration: 0.5s;
-    animation-direction: alternate;
-  }
-
-  @keyframes push-up-in {
-    from {
-      background-position: center 340px;
-    }
-
-    to {
-      background-position: 0 30px;
-    }
+    transition: background-position 0.5s;
   }
 }
 
@@ -167,40 +112,13 @@
     background-repeat: no-repeat;
     background-size: 100%;
 
-    animation-name: push-down-out;
-    animation-duration: 0.5s;
-    animation-direction: alternate;
-  }
-
-  @keyframes push-down-out {
-    from {
-      background-position: center -95px;
-    }
-
-    to {
-      background-position: center -400px;
-    }
+    transition: background-position 0.5s;
   }
 
   .opportunities__link:hover:nth-child(3) {
-    background-image: url("/assets/img/yellow_v.svg");
     background-position: center -95px;
-    background-repeat: no-repeat;
-    background-size: 100%;
 
-    animation-name: push-down-in;
-    animation-duration: 0.5s;
-    animation-direction: alternate;
-  }
-
-  @keyframes push-down-in {
-    from {
-      background-position: center -400px;
-    }
-
-    to {
-      background-position: center -95px;
-    }
+    transition: background-position 0.5s;
   }
 }
 
@@ -224,6 +142,7 @@
   .symbol__O,
   .symbol__A,
   .symbol__V {
+    position: relative;
     max-height: 138px;
   }
 }
@@ -234,10 +153,6 @@
   .symbol__V {
     width: 50px;
   }
-}
-
-.symbol__wrapper {
-  display: none;
 }
 
 .opportunities__title {

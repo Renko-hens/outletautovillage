@@ -1,7 +1,6 @@
 .main-footer {
   padding: 48px 0;
-    // 
-    background-color: #d9dde2;
+  background-color: var(--color-bg-high);
 }
 
 .main-footer__blocks:not(:first-child) {
@@ -29,16 +28,20 @@
   font-size: 16px;
   text-transform: uppercase;
   
-  color: #0E308C;
+  color: var(--color-primary);
   font-weight: 700;
 }
 
 .main-footer__link {
-  color: #0E308C;
+  color: var(--color-primary);
   text-decoration: none;
-  text-transform: uppercase;
   font-weight: 500;
   line-height: 1.5;
+}
+
+.main-footer__link:hover,
+.main-footer__link:focus {
+  color: var(--color-primary-light);
 }
 
 .company {
@@ -54,8 +57,8 @@
 
 // 
 .socials__item {
-  width: 19px;
-  height: 19px;
+  width: 24px;
+  height: 24px;
 }
 
 .socials__image {
@@ -71,11 +74,12 @@
   margin-top: 32px;
 }
 
-.copyright__text {
+.copyright__text {  
+  margin-bottom: 8px;
+  
   font-size: 14px;
   flex-basis: 100%;
   text-align: center;
-  margin-bottom: 8px;
 }
 
 .copyright__link {

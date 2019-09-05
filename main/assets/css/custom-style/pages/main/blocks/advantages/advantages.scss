@@ -1,5 +1,5 @@
 .property {
-    padding: 48px 0;
+  padding: 48px 0;
 }
 
 @include breakpoint(sm) {
@@ -9,54 +9,51 @@
 }
 
 .property__wrapper {
-    min-width: 100%;
+  min-width: 100%;
 }
 
 .property__block {
-    max-width: 640px;
+  max-width: 640px;
 }
 
 .responsibility {
-    // 
-    background-color: #0C308C;
-    // 
-    color: var(--color-white);
+  background-color: var(--color-primary);
+  color: var(--color-white);
 }
 
 // Меняем цвет заголовку
 .property--reverse .property__title {
-    // 
-    color: var(--color-white);
+  color: var(--color-white);
 }
 
 @include breakpoint(xs) {
-    //  Наследственность для блока  чтобы они не менялись местами на мобилке
-    .property--reverse .property__picture {
+  //  Наследственность для блока  чтобы они не менялись местами на мобилке
+  .property--reverse .property__picture {
     order: 1;
-    }
+  }
 
-    .property--reverse .property__block {
+  .property--reverse .property__block {
     order: 2;
-    }
+  }
 }
 
 @include breakpoint(sm) {
-    //  Наследственность для блока  чтобы они поменялись местами
-    .property--reverse .property__picture {
-        order: 2;
-    }
+  //  Наследственность для блока  чтобы они поменялись местами
+  .property--reverse .property__picture {
+    order: 2;
+  }
 
-    .property--reverse .property__block {
-        order: 1;
-    }
+  .property--reverse .property__block {
+    order: 1;
+  }
 }
 
 .property__title {
-    font-size: 24px;
-    text-align: left;
-    font-weight: 800;
-    // 
-    color: var(--color-black);
+  font-size: 24px;
+  text-align: left;
+  font-weight: 800;
+
+  color: var(--color-black);
 }
 
 @include breakpoint(sm) {
@@ -64,6 +61,7 @@
 }
 
 .property__text {
-    margin-top: 24px;
-    font-size: 16px;
+  margin-top: 24px;
+
+  font-size: 16px;
 }
