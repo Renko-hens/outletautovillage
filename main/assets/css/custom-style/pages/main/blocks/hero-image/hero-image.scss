@@ -30,9 +30,9 @@
 }
 
 @include breakpoint(sm) {
-    .hero-image__opportunities-wrapper {
-        margin-top: 32px;
-      }
+  .hero-image__opportunities-wrapper {
+    margin-top: 32px;
+  }
 }
 
 .opportunities__link {
@@ -53,10 +53,10 @@
 }
 
 @media (min-width: 570px) and (max-width: 767px) {
-    .opportunities__link {
-        max-width: 70%;
-      }
+  .opportunities__link {
+    max-width: 70%;
   }
+}
 
 .opportunities__link + .opportunities__link {
   margin-top: 16px;
@@ -68,63 +68,148 @@
   }
 }
 
-.opportunities__link:hover:nth-child(2) {
-  background-image: url('/assets/img/yellow.svg');
-  background-repeat: no-repeat;
-  background-size: 100%;
-  animation: push-up 1s infinite;
-}
+@media (min-width: 1024px) {
+  // Анимация при убирания мышки с ховера
+  .opportunities__link:nth-child(1) {
+    background-image: url("/assets/img/yellow_o.svg");
+    background-position: -600px center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
-@keyframes push-up {
-  from {
-   background-position: center 340px;
+    animation-name: push-left-out;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
   }
 
-  to {
-    background-position: center 30px;
-  }
-}
+  @keyframes push-left-out {
+    from {
+      background-position: -150px center;
+    }
 
-.opportunities__link:hover:nth-child(1) {
-  background-image: url('/assets/img/yellow_o.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  animation: push-left 1s infinite;
-}
-
-@keyframes push-left {
-  from {
-   background-position: -340px center;
+    to {
+      background-position: -600px center;
+    }
   }
 
-  to {
+  // Анимация при наведения мышки
+  .opportunities__link:hover:nth-child(1) {
+    background-image: url("/assets/img/yellow_o.svg");
     background-position: -150px center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    animation-name: push-left-in;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
+  }
+
+  @keyframes push-left-in {
+    from {
+      background-position: -420px center;
+    }
+
+    to {
+      background-position: -150px center;
+    }
   }
 }
 
-.opportunities__link:hover:nth-child(3) {
-  background-image: url('/assets/img/yellow_v.svg');
-  background-repeat: no-repeat;
-  background-size: 100%;
-  animation: push-down 1s infinite;
-}
+@media (min-width: 1024px) {
+  // Анимация при убирания мышки с ховера
+  .opportunities__link:nth-child(2) {
+    background-image: url("/assets/img/yellow.svg");
+    background-position: center 340px;
+    background-repeat: no-repeat;
+    background-size: 100%;
 
-@keyframes push-down {
-  from {
-   background-position: center -340px;
+    animation-name: push-up-out;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
   }
 
-  to {
+  @keyframes push-up-out {
+    from {
+      background-position: 0 30px;
+    }
+
+    to {
+      background-position: center 340px;
+    }
+  }
+
+  // Анимация при наведения мышки
+  .opportunities__link:hover:nth-child(2) {
+    background-image: url("/assets/img/yellow.svg");
+    background-position: 0 30px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    animation-name: push-up-in;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
+  }
+
+  @keyframes push-up-in {
+    from {
+      background-position: center 340px;
+    }
+
+    to {
+      background-position: 0 30px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .opportunities__link:nth-child(3) {
+    background-image: url("/assets/img/yellow_v.svg");
+    background-position: center -400px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    animation-name: push-down-out;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
+  }
+
+  @keyframes push-down-out {
+    from {
+      background-position: center -95px;
+    }
+
+    to {
+      background-position: center -400px;
+    }
+  }
+
+  .opportunities__link:hover:nth-child(3) {
+    background-image: url("/assets/img/yellow_v.svg");
     background-position: center -95px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    animation-name: push-down-in;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
+  }
+
+  @keyframes push-down-in {
+    from {
+      background-position: center -400px;
+    }
+
+    to {
+      background-position: center -95px;
+    }
   }
 }
 
 @media (min-width: 320px) and (max-width: 569px) {
-    .symbol {
-        display: flex;
-        justify-content: center;
-    }
+  .symbol {
+    display: flex;
+    justify-content: center;
   }
+}
 
 @media (min-width: 320px) and (max-width: 569px) {
   .symbol__block {
