@@ -13,7 +13,11 @@
 @import 'custom-style/pages/main/blocks/reviews/reviews.scss';
 @import 'custom-style/pages/main/blocks/map/map.scss';
 
-@import 'custom-style/pages/change/form-data/form-data.scss';
+// page "change"
+@import 'custom-style/pages/change/search/search.scss';
+@import 'custom-style/pages/change/features/features.scss';
+@import 'custom-style/pages/change/trade/trade.scss';
+@import 'custom-style/pages/change/steps/steps.scss';
 
 // Parts folder reusable
 @import 'custom-style/pages/parts/header/header.scss';
