@@ -8,9 +8,7 @@
 }
 
 .search__title {
-    font-size: 24px;
     font-weight: 700;
-
     color: var(--color-white);
 }
 
@@ -46,6 +44,25 @@
     }
 }
 
+.control-block {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .search__button {
     font-weight: 700;
+}
+
+.search__control-link {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    margin-left: 32px;
+    padding: 0;
+}
+
+.search__image {
+    margin-right: 8px;
 }

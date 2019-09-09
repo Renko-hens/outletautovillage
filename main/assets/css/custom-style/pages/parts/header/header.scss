@@ -135,25 +135,6 @@
   }
 }
 
-.link {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.5rem;
-  
-  text-decoration: none;
-
-  color: var(--color-primary);
-}
-
-.link:hover,
-.link:focus {
-  color: var(--color-primary-light);
-}
-
-.link:active {
-  color: var(--color-primary-dark);
-}
-
 .navigation__link {
   position: relative;
 

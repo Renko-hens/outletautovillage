@@ -79,9 +79,16 @@ mark {
 
 .title {
   font-size: 24px;
+  font-weight: 800;
   text-align: left;
   text-transform: uppercase;
   color: var(--color-primary);
 
   margin: 0 auto;
+}
+
+@include breakpoint(sm) {
+  .title {
+    font-size: 32px;
+  }
 }

@@ -49,17 +49,10 @@
 }
 
 .property__title {
-  font-size: 24px;
   text-align: left;
-  font-weight: 800;
 
   color: var(--color-black);
 }
-
-@include breakpoint(sm) {
-  font-size: 32px;
-}
-
 .property__text {
   margin-top: 24px;
 

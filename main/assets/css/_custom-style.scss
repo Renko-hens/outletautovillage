@@ -19,6 +19,10 @@
 @import 'custom-style/pages/change/trade/trade.scss';
 @import 'custom-style/pages/change/steps/steps.scss';
 
+// page "buy"
+@import 'custom-style/pages/buy/ready-buy/ready-buy.scss';
+@import 'custom-style/pages/buy/request-test/request-test.scss';
+
 // Parts folder reusable
 @import 'custom-style/pages/parts/header/header.scss';
 @import 'custom-style/pages/parts/footer/footer.scss';

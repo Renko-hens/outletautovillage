@@ -12,16 +12,8 @@
 
 .reviews__title {
     text-align: left;
-    font-size: 24px;
-    font-weight: 800;
     
     color: var(--color-black);
-}
-
-@include breakpoint(sm) {
-  .reviews__title {
-    font-size: 32px;
-    }
 }
 
 .reviews__blocks {
@@ -113,14 +105,4 @@
     font-weight: 600;
     color: var(--color-white);
     text-decoration: none;
-}
-
-.reviews__link:hover,
-.reviews__link:focus {
-    background-color: var(--color-primary-light);
-    transition: background-color 0.2s;
-}
-
-.reviews__link:active {
-    background-color: var(--color-primary-dark);
 }

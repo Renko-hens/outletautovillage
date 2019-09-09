@@ -1,5 +1,11 @@
 .features {
-    padding: 80px 0;
+    padding: 48px 0;
+}
+
+@include breakpoint(sm) {
+    .features {
+        padding: 80px 0;
+    }
 }
 
 .features__wrapper + .features__wrapper {
@@ -9,9 +15,6 @@
 .features__title {
     max-width: 561px;
     margin-left: 0;
-
-    font-size: 32px;
-    font-weight: 700;
 
     color: var(--color-black);
 }

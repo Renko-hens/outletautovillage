@@ -17,6 +17,9 @@ Usage: codyhouse.co/license
 
   select {
     padding-right: calc(var(--select-icon-size) + var(--select-icon-right-margin) * 2);
+    padding-top: var(--select-icon-size);
+    padding-bottom: var(--select-icon-size);
+
   }
 
   .icon {

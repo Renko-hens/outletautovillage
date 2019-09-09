@@ -143,7 +143,7 @@
 
         <section class="search">
 
-            <h1 class="vissualy-hidden">
+            <h1 class="visually-hidden">
                 Обменять автомобиль
             </h1>
 
@@ -151,103 +151,152 @@
 
                 <div class="search__wrapper">
 
-                    <h2 class="search__title">
-                        Укажите данные вашего авто
+                    <h2 class="search__title title">
+                        Выберите желайемый <br>
+                        параметры автомобиля
                     </h2>
                 </div>
 
                 <div class="search__wrapper">
 
-                    <form class="search__form form-search">
+                    <form class="search__form form-search flex">
 
-                        <div class="form-search__wrapper">
+                        <div class="form-search__wrapper select">
 
                             <select
-                                name="make"
-                                id="make"
-                                class="form-search__select"
+                                class="form-search__control form-control width-100%"
+                                name="Марка"
+                                name="selectThis"
+                                id="selectThis"
                             >
-                                <option
-                                    value="Марка"
-                                    class="form-search__option"
+                                <optgroup label="Марка">
+                                    <option value="0">Марка</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                </optgroup>
+
+                            </select>
+
+                            <svg
+                                class="icon"
+                                aria-hidden="true"
+                                viewBox="0 0 16 16"
+                            >
+                                <g
+                                    stroke-width="1"
+                                    stroke="currentColor"
                                 >
-                                    Марка</option>
-                                <option
-                                    value="#"
-                                    class="form-search__option"
-                                ></option>
-                                <option
-                                    value="#"
-                                    class="form-search__option"
-                                ></option>
-                            </select>
+                                    <polyline
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-miterlimit="10"
+                                        points="15.5,4.5 8,12 0.5,4.5 "
+                                    ></polyline>
+                                </g>
+                            </svg>
                         </div>
 
-                        <div class="form-search__wrapper">
+                        <div class="form-search__wrapper select">
 
                             <select
-                                name="model"
-                                id="model"
-                                class="form-search__select"
+                                class="form-search__control form-control width-100%"
+                                name="selectThis"
+                                id="selectThis"
                             >
-                                <option
-                                    value="Модель"
-                                    class="form-search__option"
-                                >Модель</option>
-                                <option
-                                    value="#"
-                                    class="form-search__option"
-                                ></option>
-                                <option
-                                    value="#"
-                                    class="form-search__option"
-                                ></option>
+                                <optgroup label="Модель">
+                                    <option value="0">Модель</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                </optgroup>
+
                             </select>
+
+                            <svg
+                                class="icon"
+                                aria-hidden="true"
+                                viewBox="0 0 16 16"
+                            >
+                                <g
+                                    stroke-width="1"
+                                    stroke="currentColor"
+                                >
+                                    <polyline
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-miterlimit="10"
+                                        points="15.5,4.5 8,12 0.5,4.5 "
+                                    ></polyline>
+                                </g>
+                            </svg>
                         </div>
 
-                        <div class="form-search__wrapper">
+                        <div class="form-search__wrapper select">
 
                             <select
-                                name="years"
-                                id="years"
-                                class="form-search__select"
+                                class="form-search__control form-control width-100%"
+                                name="selectThis"
+                                id="selectThis"
                             >
-                                <option
-                                    value="Год"
-                                    class="form-search__option"
-                                >Год</option>
-                                <option
-                                    value="#"
-                                    class="form-search__option"
-                                ></option>
-                                <option
-                                    value="#"
-                                    class="form-search__option"
-                                ></option>
+                                <optgroup label="Год">
+                                    <option value="0">Год</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                </optgroup>
+
                             </select>
+
+                            <svg
+                                class="icon"
+                                aria-hidden="true"
+                                viewBox="0 0 16 16"
+                            >
+                                <g
+                                    stroke-width="1"
+                                    stroke="currentColor"
+                                >
+                                    <polyline
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-miterlimit="10"
+                                        points="15.5,4.5 8,12 0.5,4.5 "
+                                    ></polyline>
+                                </g>
+                            </svg>
                         </div>
+
                     </form>
                 </div>
 
-                <div class="search__wrapper">
+                <div class="search__wrapper control-block">
 
-                    <button class="search__button btn btn--primary">
-                        Рассчитать
+                    <button class="search__button btn btn--search">
+                        Начать поиск
                     </button>
 
-                    <button class="search__button settings">
+                    <button class="search__control-link">
+
+                        <img
+                            class="search__image"
+                            src="/assets/img/settings.png"
+                            alt="settings"
+                        >
                         Больше параметров
                     </button>
                 </div>
 
                 <img
                     class="search__background"
-                    src="/assets/img/V.jpg"
+                    src="/assets/img/A.jpg"
                     alt="#"
                 >
             </div>
         </section>
-
         <!-- Виджет -->
 
         <section class="vjs">
@@ -261,7 +310,7 @@
 
                 <div class="features__wrapper">
 
-                    <h2 class="features__title">
+                    <h2 class="features__title title">
                         Преимущества покупки в Outlet Auto Village
                     </h2>
                 </div>
@@ -278,17 +327,15 @@
 
                         <li class="feature__item">
 
-                            <p class="feature__text">Дадим гарантию, что все автомобили в наличии прошли полную
-                                диагностическую проверку</p>
+                            <p class="feature__text"> Бесплатно оформим документы
+                            </p>
+
                         </li>
-
-
-
 
                         <li class="feature__item">
 
-                            <p class="feature__text"> Бесплатно оформим документы
-                            </p>
+                            <p class="feature__text">Дадим гарантию, что все автомобили в наличии прошли полную
+                                диагностическую проверку</p>
                         </li>
 
                         <li class="feature__item">
@@ -298,7 +345,7 @@
                                 со своим диагностом</p>
                         </li>
 
-                        <li class="feature__item">
+                        <li class="feature__item feature__item--reverse">
 
                             <p class="feature__text">Продадим машину юридическому лицу</p>
                         </li>
@@ -306,10 +353,70 @@
                 </div>
             </div>
         </section>
+        <!-- email-form -->
 
-        <!--  -->
+        <section class="request-test">
 
-        <section class="property buy">
+            <div class="requset-test__container container max-width-md">
+
+                <div class="request-test__wrapper">
+
+                    <h2 class="request-test__form-title title">
+                        Запрос на тест-драйв
+                    </h2>
+
+                    <form class="form-drive">
+
+                        <label for="form-drive__name">
+                            Имя
+
+                            <input
+                                class="form-drive__input"
+                                type="text"
+                                id="form-drive__name"
+                            >
+                        </label>
+
+                        <label for="form-drive__phone">
+                            Телефон
+                            <input
+                                class="form-drive__input"
+                                type="phone"
+                                id="form-drive__phone"
+                            >
+                        </label>
+                            E-mail
+                        <label for="form-drive__email">
+
+                            <input
+                                class="form-drive__input"
+                                type="email"
+                                id="form-drive__email"
+                            >
+                        </label>
+
+                        <div class="form-drive__controls">
+                            <button class="form-drive__button btn btn--search">
+                                Отправить
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="request-test__wrapper rating">
+                    <div class="rating__block">
+                        <img src="/assets/img/rating.svg" alt="rating" class="image">
+                    </div>
+                    <h2 class="rating-title title">
+                            Оцените автомобиль на дороге
+                    </h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- managment -->
+
+        <section class="property ready-buy">
 
             <div class="property__container container max-width-md">
 
@@ -332,18 +439,20 @@
                         <div class="property__description">
 
                             <p class="property__text">
-                                Мы готовы купить Ваш автомобиль, даже если Вы не собираетесь ничего приобретать у нас.
-                                Денежные средства Вы получаете в течение нескольких часов.
+                                Ваш персональный менеджер будет консультировать Вас от момента выбора до момента
+                                окончательной покупки автомобиля в Санкт-Петербурге.
+                                <br>
+                                Вам не придётся ломать голову, каким образом происходит сделка, какие документы надо
+                                взять и в какой последовательности проходят все этапы оформления.
                             </p>
 
                             <p class="property__text">
-                                Весь процесс будет курировать Ваш персональный менеджер. Он подскажет порядок действий,
-                                проконсультирует, ответит на Ваши вопросы.
+                                OUTLET AUTO VILLAGE сделает это за Вас. С нами купить б/у автомобиль в СПб стало проще и
+                                безопаснее. При этом с нашей стороны не будет абсолютно никакого давления на Вас.
                             </p>
 
                             <p class="property__text property__text--strong">
-                                С OUTLET AUTO VILLAGE продать автомобиль
-                                с пробегом в СПб стало ещё проще!
+                                Мы уважаем Ваш выбор.
                             </p>
                         </div>
                     </div>

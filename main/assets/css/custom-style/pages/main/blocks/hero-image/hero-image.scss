@@ -74,7 +74,7 @@
   // Анимация при наведения мышки
   .opportunities__link:nth-child(1) {
     background-image: url("/assets/img/yellow_o.svg");
-    background-position: -420px center;
+    background-position: -480px center;
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -82,7 +82,7 @@
   }
 
   .opportunities__link:hover:nth-child(1) {
-    background-position: -150px center;
+    background-position: -160px center;
 
     transition: background-position 0.5s;
   }
@@ -117,7 +117,7 @@
   }
 
   .opportunities__link:hover:nth-child(3) {
-    background-position: center -95px;
+    background-position: center -85px;
 
     transition: background-position 0.5s;
   }

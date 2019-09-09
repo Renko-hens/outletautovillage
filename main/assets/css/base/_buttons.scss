@@ -20,6 +20,16 @@
   color: var(--color-white, hsl(0, 0%, 100%));
 }
 
+.btn--primary:hover,
+.btn--primary:focus {
+    background-color: var(--color-primary-light);
+    transition: background-color 0.2s;
+}
+
+.btn--primary:active {
+    background-color: var(--color-primary-dark);
+}
+
 .btn--subtle {
   background-color: var(--color-contrast-low, hsl(240, 1%, 83%));
   color: var(--color-contrast-higher, hsl(240, 8%, 12%));
@@ -33,6 +43,18 @@
 .btn--search {
   background-color: var(--color-warning);
   color: var(--color-black);
+  transition: background-color 0.2s;
+}
+
+.btn--search:hover,
+.btn--search:focus {
+  background-color: var(--color-warning-light);
+  transition: background-color 0.2s;
+}
+
+.btn--search:active {
+  background-color: var(--color-warning-dark);
+  transition: background-color 0.2s;
 }
 
 // size
