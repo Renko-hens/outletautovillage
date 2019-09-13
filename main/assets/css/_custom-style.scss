@@ -14,14 +14,17 @@
 @import 'custom-style/pages/main/blocks/map/map.scss';
 
 // page "change"
+@import 'custom-style/pages/change/payment/payment.scss';
 @import 'custom-style/pages/change/search/search.scss';
 @import 'custom-style/pages/change/features/features.scss';
 @import 'custom-style/pages/change/trade/trade.scss';
 @import 'custom-style/pages/change/steps/steps.scss';
 
 // page "buy"
-@import 'custom-style/pages/buy/ready-buy/ready-buy.scss';
 @import 'custom-style/pages/buy/request-test/request-test.scss';
+
+// page "sale"
+@import 'custom-style/pages/sale/ready-buy/ready-buy.scss';
 
 // Parts folder reusable
 @import 'custom-style/pages/parts/header/header.scss';

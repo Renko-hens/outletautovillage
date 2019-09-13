@@ -49,6 +49,19 @@
 
 .form-drive__button {
   font-weight: 700;
+  box-shadow: 0 0px 10px var(--color-shadow);
+}
+
+@include breakpoint(xs) {
+  .form-drive__button {
+    width: 100%;
+  }
+}
+
+@include breakpoint(sm) {
+  .form-drive__button {
+    width: auto;
+  }
 }
 
 @include breakpoint(xs) {

@@ -1,0 +1,24 @@
+.payment {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    background-color: var(--color-bg-low);
+    padding: 24px;
+}
+
+.payment__wrapper {
+    flex-basis: 50%;
+}
+
+.payment__block-title {
+    flex-basis: 100%;
+}
+
+.payment__form {
+    flex-basis: 100%;
+}
+
+.payment__button {
+    box-shadow: none;
+    font-weight: 700;
+}

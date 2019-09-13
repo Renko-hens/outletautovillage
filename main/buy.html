@@ -234,7 +234,7 @@
                             </svg>
                         </div>
 
-                        <div class="form-search__wrapper select">
+                        <div class="form-search__wrapper form-search__wrapper--half-width select">
 
                             <select
                                 class="form-search__control form-control width-100%"
@@ -242,7 +242,43 @@
                                 id="selectThis"
                             >
                                 <optgroup label="Год">
-                                    <option value="0">Год</option>
+                                    <option value="0">Год, от</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                </optgroup>
+
+                            </select>
+
+                            <svg
+                                class="icon"
+                                aria-hidden="true"
+                                viewBox="0 0 16 16"
+                            >
+                                <g
+                                    stroke-width="1"
+                                    stroke="currentColor"
+                                >
+                                    <polyline
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-miterlimit="10"
+                                        points="15.5,4.5 8,12 0.5,4.5 "
+                                    ></polyline>
+                                </g>
+                            </svg>
+                        </div>
+
+                        <div class="form-search__wrapper form-search__wrapper--half-width select">
+
+                            <select
+                                class="form-search__control form-control width-100%"
+                                name="selectThis"
+                                id="selectThis"
+                            >
+                                <optgroup label="Год">
+                                    <option value="0">До</option>
                                     <option value="1">Option 1</option>
                                     <option value="2">Option 2</option>
                                 </optgroup>
@@ -289,16 +325,98 @@
                         Больше параметров
                     </button>
                 </div>
-
-                <img
-                    class="search__background"
-                    src="/assets/img/A.jpg"
-                    alt="#"
-                >
             </div>
-        </section>
-        <!-- Виджет -->
 
+            <img
+            class="search__background"
+            src="/assets/img/V.svg"
+            alt="#"
+        >
+        </section>
+
+        <!-- Расчет -->
+        <section class="search">
+                <div class="payment container max-width-md">
+                        <div class="payment__wrapper">
+                                <h2 class="payment__title title">
+                                    Среднерыночная Цена
+                                    на Volkswagen polo 2008
+                                </h2>
+                        </div>
+                        <div class="payment__wrapper">
+                            <div class="payment__price">
+                                <p class="payment__from">
+                                    от 337 900 р
+                                </p>
+                                <p class="payment__to">
+                                    до 506 850 р
+                                </p>
+                            </div>
+                        </div>
+                        <div class="payment__block-title">
+                            <h3 class="payment__form-title">
+                                Записаться на детальную оценку
+                            </h3>
+                        </div>
+                        <form class="payment__form form-payment flex">
+                                        <div class="margin-bottom-sm">
+                                                <label class="form-label margin-bottom-xxxs" for="inputEmail1">Имя*</label>
+                                                <input class="form-control width-100%" type="text" name="inputName1" id="inputEmail1" placeholder="email@myemail.com">
+                                        </div>
+                                        <div class="margin-bottom-sm">
+                                                <label class="form-label margin-bottom-xxxs" for="inputEmail1">Телефон*</label>
+                                                <input class="form-control width-100%" type="email" name="inputPhone1" id="inputEmail1" placeholder="email@myemail.com">
+                                        </div>        
+                                        <div class="margin-bottom-sm">
+                                                <label class="form-label margin-bottom-xxxs" for="inputEmail1">Email*</label>
+                                                <input class="form-control width-100%" type="email" name="inputEmail1" id="inputEmail1" placeholder="email@myemail.com">
+                                        </div>                
+                                        <div class="form-payment__wrapper select">
+
+                                                <select
+                                                    class="form-payment__control form-control width-100%"
+                                                    name="selectThis"
+                                                    id="selectThis"
+                                                >
+                                                    <optgroup label="Год">
+                                                        <option value="0">Год, от</option>
+                                                        <option value="1">Option 1</option>
+                                                        <option value="2">Option 2</option>
+                                                    </optgroup>
+                    
+                                                </select>
+                    
+                                                <svg
+                                                    class="icon"
+                                                    aria-hidden="true"
+                                                    viewBox="0 0 16 16"
+                                                >
+                                                    <g
+                                                        stroke-width="1"
+                                                        stroke="currentColor"
+                                                    >
+                                                        <polyline
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-miterlimit="10"
+                                                            points="15.5,4.5 8,12 0.5,4.5 "
+                                                        ></polyline>
+                                                    </g>
+                                                </svg>
+                                            </div>
+                        </form>
+                        <div class="payment__wrapper control-block">
+
+                                <button class="payment__button btn btn--search">
+                                   Записаться
+                                </button>
+                        </div>
+                </div>
+        </section>
+
+        <!-- Виджет здесь должен быть виджет-->
         <section class="vjs">
         </section>
 
@@ -354,6 +472,7 @@
             </div>
         </section>
 
+        <!-- request-test -->
         <section class="request-test">
 
             <div class="requset-test__container grid container max-width-md">
@@ -418,7 +537,6 @@
         </section>
 
         <!-- managment -->
-
         <section class="property ready-buy">
 
             <div class="property__container container max-width-md">
