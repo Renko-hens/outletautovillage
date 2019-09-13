@@ -10,7 +10,27 @@
     flex-basis: 50%;
 }
 
+.payment__title {
+    font-size: 24px;
+    color: var(--color-black);
+}
+
+.payment__price {
+    font-weight: 700;
+    text-align: right;
+}
+
+.payment__from {
+    font-size: 16px;
+}
+
+.payment__to {
+    font-size: 24px;
+}
+
 .payment__block-title {
+    font-size: 20px;
+    font-weight: 700;
     flex-basis: 100%;
 }
 
