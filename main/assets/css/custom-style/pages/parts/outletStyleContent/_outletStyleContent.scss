@@ -1,0 +1,46 @@
+// Цвет текста становится белым
+.outlet__color-text--light {
+    color: var(--color-white);
+}
+
+// Цвет текста становится синим
+.outlet__color-text--primary {
+    color: var(--color-primary);
+}
+
+// Цвет текста становится черным
+.outlet__color-text--dark {
+    color: var(--color-black);
+}
+
+.outlet__flex-order--left {
+    order: 1;
+}
+
+.outlet__flex-order--right {
+    order: 2;
+}
+
+.outlet__color-background--light {
+    background-color: var(--color-white);
+}
+
+.outlet__background-color--dark {
+    background-color: var(--color-black);
+}
+
+.outlet__background-color--primary {
+    background-color: var(--color-primary);
+}
+
+.outlet__background-color--secondary {
+    background-color: var(--color-main)
+}
+
+.outlet__background-color--light-low {
+    background-color: var(--color-bg-low);
+}
+
+.outlet__background-color--transparent {
+    background-color: transparent;
+}

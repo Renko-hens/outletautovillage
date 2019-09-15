@@ -1,174 +1,126 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1"
-  >
-  <link
-    href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900&display=swap"
-    rel="stylesheet"
-  >
-  <script>document.getElementsByTagName("html")[0].className += " js";</script>
-  <script>
-    if ('CSS' in window && CSS.supports('color', 'var(--color-var)')) {
-      document.write('<link rel="stylesheet" href="assets/css/style.css">');
-    } else {
-      document.write('<link rel="stylesheet" href="assets/css/style-fallback.css">');
-    }
-  </script>
-  <noscript>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900&display=swap" rel="stylesheet">
+    <script>
+        document.getElementsByTagName("html")[0].className += " js";
+    </script>
+    <script>
+        if ('CSS' in window && CSS.supports('color', 'var(--color-var)')) {
+            document.write('<link rel="stylesheet" href="assets/css/style.css">');
+        } else {
+            document.write('<link rel="stylesheet" href="assets/css/style-fallback.css">');
+        }
+    </script>
+    <noscript>
     <link
       rel="stylesheet"
       href="assets/css/style-fallback.css"
     >
   </noscript>
-  <title>OutletAutoVillage</title>
+    <title>OutletAutoVillage</title>
 </head>
 
 <body>
 
-  <!-- Header -->
+    <!-- Header -->
 
-  <header class="main-header">
+    <header class="main-header">
 
-    <div class="main-header__container max-width-md grid justify-between items-center">
+        <div class="main-header__container max-width-md grid justify-between items-center">
 
-      <a
-        href="/"
-        class="main-header__wrapper-pictures col-2 col-3@xs col-2@sm"
-      >
+            <a href="/" class="main-header__wrapper-pictures col-2 col-3@xs col-2@sm">
 
-        <img
-          class="images"
-          src="/assets/img/logo.svg"
-          alt="Outlet Auto Village"
-        >
-      </a>
+                <img class="images" src="/assets/img/logo.svg" alt="Outlet Auto Village">
+            </a>
 
-      <nav class="main-header__navigation navigation col-12@xs col-5 col-6@sm">
+            <nav class="main-header__navigation navigation col-12@xs col-5 col-6@sm">
 
-        <ul class="navigation__list flex flex-wrap">
+                <ul class="navigation__list flex flex-wrap">
 
-          <li class="navigation__item">
+                    <li class="navigation__item">
 
-            <a
-              class="navigation__link link"
-              href="change.html"
-            >Обменять</a></li>
+                        <a class="navigation__link link" href="change.html">Обменять</a></li>
 
-          <li class="navigation__item">
+                    <li class="navigation__item">
 
-            <a
-              class="navigation__link link"
-              href="sale.html"
-            >Продать</a></li>
+                        <a class="navigation__link link" href="sale.html">Продать</a></li>
 
-          <li class="navigation__item">
+                    <li class="navigation__item">
 
-            <a
-              class="navigation__link link"
-              href="#"
-            >Купить</a></li>
+                        <a class="navigation__link link" href="#">Купить</a></li>
 
-          <li class="navigation__item">
+                    <li class="navigation__item">
 
-            <a
-              class="navigation__link link"
-              href="#"
-            >Акции</a></li>
+                        <a class="navigation__link link" href="#">Акции</a></li>
 
-          <li class="navigation__item">
+                    <li class="navigation__item">
 
-            <a
-              class="navigation__link link"
-              href="#"
-            >Компания</a></li>
+                        <a class="navigation__link link" href="#">Компания</a></li>
 
-          <li class="navigation__item">
+                    <li class="navigation__item">
 
-            <a
-              class="navigation__link link"
-              href="#"
-            >Отзывы</a></li>
+                        <a class="navigation__link link" href="#">Отзывы</a></li>
 
-          <li class="navigation__item">
+                    <li class="navigation__item">
 
-            <a
-              class="navigation__link link"
-              href="#"
-            >Контакты</a></li>
-        </ul>
-      </nav>
+                        <a class="navigation__link link" href="#">Контакты</a></li>
+                </ul>
+            </nav>
 
-      <div
-        class="main-header__information text-right col-5 col-7@xs col-4@sm flex justify-center@xs  items-end@sm flex-column@sm"
-      >
+            <div class="main-header__information text-right col-5 col-7@xs col-4@sm flex justify-center@xs  items-end@sm flex-column@sm">
 
-        <p class="main-header__text">
-          угол 8-го Верхнего и пр. Культуры <br>
-          (напротив пр. Культуры, 50Б)
-        </p>
+                <p class="main-header__text">
+                    угол 8-го Верхнего и&nbsp;пр. Культуры <br> (напротив пр. Культуры, 50Б)
+                </p>
 
-        <a
-          class="main-header__link link"
-          href="tel:+78124459713"
-        >
+                <a class="main-header__link link" href="tel:+78124459713">
           +7 812 445-97-13
         </a>
-      </div>
+            </div>
 
-      <div class="main-header__menu-block col-5 col-2@xs flex justify-end@xs">
+            <div class="main-header__menu-block col-5 col-2@xs flex justify-end@xs">
 
-        <button
-          class="main-header__button reset anim-menu-btn js-anim-menu-btn"
-          aria-label="Toggle menu"
-        >
+                <button class="main-header__button reset anim-menu-btn js-anim-menu-btn" aria-label="Toggle menu">
 
           <i
             class="anim-menu-btn__icon anim-menu-btn__icon--close"
             aria-hidden="true"
           ></i>
         </button>
-      </div>
+            </div>
 
-    </div>
-  </header>
+        </div>
+    </header>
 
-  <!-- Main -->
-  <main class="main">
+    <!-- Main -->
+    <main class="main">
 
-    <!-- Главный баннер -->
+        <!-- Главный баннер -->
+        <section class="hero-image">
 
-    <section class="hero-image">
+            <div class="hero-image__container container max-width-md">
 
-      <div class="hero-image__container container max-width-md">
+                <h1 class="hero-image__main-title title col-12">
+                    Автомобили с&nbsp;пробегом
+                </h1>
 
-        <h1 class="hero-image__main-title title col-12">
-          Автомобили с&nbsp;пробегом
-        </h1>
+                <div class="hero-image__opportunities-wrapper opportunities grid grid-gap-sm justify-center">
 
-        <div class="hero-image__opportunities-wrapper opportunities grid grid-gap-sm justify-center">
+                    <a href="change.html" class="opportunities__link  col-12@xs col-4@sm ">
 
-          <a
-            href="change.html"
-            class="opportunities__link  col-12@xs col-4@sm "
-          >
+                        <div class="opportunities__block symbol">
+                            <!-- "symbol__O" прозрачная внутри и будет появляться при наведений -->
 
-            <div class="opportunities__block symbol">
-              <!-- "symbol__O" прозрачная внутри и будет появляться при наведений -->
+                            <div class="symbol__block">
 
-              <div class="symbol__block">
+                                <div class="symbol__wrapper-O">
 
-                <div class="symbol__wrapper-O">
-
-                  <svg
-                    class="symbol__O"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 144 138"
-                  >
+                                    <svg class="symbol__O" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 138">
                     <path
                       d="M111.4 84.3c-.2.8-.5 1.5-.8 2.3-.6 1.5-1.2 2.9-1.9 4.2l-.1.2a38.9 38.9 0 0 1-17.5 17.6c-.5.3-1 .7-1.6 1a43.75 43.75 0 0 1-17 3.4h-.1c-1.4 0-2.8-.1-4.2-.2-4.4-.4-8.7-1.5-12.8-3.2-5.4-2.4-10-5.8-13.7-10-2.3-2.7-4.2-5.6-5.8-8.7l-6.8.1H19l14.7-36.8c1.7-5.6 4.4-10.5 8.2-14.8 3.7-4.3 8.3-7.6 13.7-9.9 5.4-2.3 11-3.5 17-3.5s11.6 1.2 17 3.5 10 5.7 13.7 9.9c1.5 1.7 2.5 3.3 3.3 5 .8 1.2 1.5 2.4 2.2 3.7l7.1-.2H126l-14.6 36.4zm27.2-42.4c-3.5-8.6-8.6-16-15.2-22.2a64.98 64.98 0 0 0-23.2-14.4C91.3 1.7 81.9 0 72 0c-9.9 0-19.4 1.7-28.4 5.2a69.4 69.4 0 0 0-23.1 14.4A66.2 66.2 0 0 0 5.4 41.9 69 69 0 0 0 0 69a69 69 0 0 0 5.4 27.1c3.6 8.6 8.6 16 15.1 22.2 6.6 6.3 14.3 11.1 23.1 14.5 9 3.4 18.4 5.1 28.4 5.1 9.9 0 19.3-1.7 28.3-5.1 9-3.5 16.6-8.3 23.2-14.5a65.6 65.6 0 0 0 15.2-22.2c3.6-8.6 5.4-17.6 5.4-27.1-.1-9.5-1.9-18.6-5.5-27.1z"
                       fill-rule="evenodd"
@@ -176,32 +128,25 @@
                       fill="#0c308c"
                     />
                   </svg>
-                  <!-- Background--O -->
-                </div>
+                                    <!-- Background--O -->
+                                </div>
 
 
-                <h2 class="opportunities__title title">
-                  Обменять
-                </h2>
-              </div>
-            </div>
-          </a>
+                                <h2 class="opportunities__title title outlet__color-text--primary">
+                                    Обменять
+                                </h2>
+                            </div>
+                        </div>
+                    </a>
 
-          <a
-            href="sale.html"
-            class="opportunities__link col-12@xs col-4@sm"
-          >
+                    <a href="sale.html" class="opportunities__link col-12@xs col-4@sm">
 
-            <div class="opportunities__block symbol">
-              <!-- "symbol__A" прозрачная внутри и будет появляться при наведений -->
+                        <div class="opportunities__block symbol">
+                            <!-- "symbol__A" прозрачная внутри и будет появляться при наведений -->
 
-              <div class="symbol__block">
+                            <div class="symbol__block">
 
-                <svg
-                  class="symbol__A"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 162 135"
-                >
+                                <svg class="symbol__A" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 162 135">
                   <path
                     fill-rule="evenodd"
                     clip-rule="evenodd"
@@ -209,28 +154,21 @@
                     d="M64.2 0L0 135H65.9v-27.2H44.7L81 31.2l36.3 76H96.7V135H162L97.7 0H64.2z"
                   /></svg>
 
-                <h2 class="opportunities__title title">
-                  Продать
-                </h2>
-              </div>
-            </div>
-          </a>
+                                <h2 class="opportunities__title title outlet__color-text--primary">
+                                    Продать
+                                </h2>
+                            </div>
+                        </div>
+                    </a>
 
-          <a
-            href="buy.html"
-            class="opportunities__link col-12@xs col-4@sm"
-          >
+                    <a href="buy.html" class="opportunities__link col-12@xs col-4@sm">
 
-            <div class="opportunities__block symbol">
-              <!-- "symbol__O" прозрачная внутри и будет появляться при наведений -->
+                        <div class="opportunities__block symbol">
+                            <!-- "symbol__O" прозрачная внутри и будет появляться при наведений -->
 
-              <div class="symbol__block">
+                            <div class="symbol__block">
 
-                <svg
-                  class="symbol__V"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 162 135"
-                >
+                                <svg class="symbol__V" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 162 135">
                   <path
                     fill-rule="evenodd"
                     clip-rule="evenodd"
@@ -238,506 +176,408 @@
                     d="M128.7 0H96.1v27.2h21.2L81 100.5 44.7 27.8h20.6V0H0l64.3 135h33.5L162 0h-33.3z"
                   /></svg>
 
-                <h2 class="opportunities__title title">
-                  Купить
+                                <h2 class="opportunities__title title outlet__color-text--primary">
+                                    Купить
+                                </h2>
+
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- location -->
+        <section class="property location">
+
+            <div class="property__container container max-width-md">
+
+                <div class="property__wrapper flex flex-column@xs flex-row@sm items-center justify-end  flex-gap-lg">
+
+                    <div class="property__picture">
+
+                        <img class="property__image" src="/assets/img/location.svg" alt="location">
+                    </div>
+
+                    <div class="property__block">
+
+                        <h2 class="property__title title">
+                            Не тратьте время на&nbsp;разъеды по&nbsp;салонам города!
+                        </h2>
+
+                        <div class="property__description">
+
+                            <p class="property__text">
+                                Мы предлагаем широкий выбор из&nbsp;более чем&nbsp;220 автомобилей, а&nbsp;Ваш&nbsp;автомобиль выкупаем в&nbsp;день обращения.
+                            </p>
+
+                            <p class="property__text">
+                                Мы приобретаем абсолютно любые автомобили, вне&nbsp;зависимости от&nbsp;их&nbsp;марки, модели или пробега. Оценка Вашего транспортного средства составит не более 30 минут.
+                            </p>
+
+                            <p class="property__text">
+                                Мы готовы купить Ваш автомобиль с&nbsp;пробегом в&nbsp;Санкт-Петербурге, даже если Вы не собираетесь ничего приобретать у нас. Денежные средства Вы&nbsp;получаете в&nbsp;течении двух часов.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- responsibility -->
+        <section class="property property--reverse responsibility outlet__background-color--primary">
+
+            <div class="property__container container max-width-md">
+
+                <div class="property__wrapper flex  flex-column@xs flex-row@sm items-center justify-end flex-gap-xl">
+
+                    <div class="property__picture outlet__flex-order--right">
+
+                        <img class="property__image" src="/assets/img/responsibility.svg" alt="location">
+                    </div>
+
+                    <div class="property__block outlet__flex-order--left">
+
+                        <h2 class="property__title outlet__color-text--light  title">
+                            Мы несем ответственность за&nbsp;каждый автомобиль
+                        </h2>
+
+                        <div class="property__description outlet__color-text--light">
+
+                            <p class="property__text">
+                                Предлагаем только надёжные варианты, которые прошли полный технический осмотр и&nbsp;юридическую проверку. Таким образом, в OAV <br> Вы можете купить автомобиль с пробегом, будучи уверенными в его качестве и&nbsp;безопасности
+                                сделки.
+                            </p>
+
+                            <p class="property__text">
+                                Наше предложение по цене окончательно <br> и не содержит никаких скрытых платежей.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- smart -->
+        <section class="property smart">
+
+            <div class="property__container container max-width-md">
+
+                <div class="property__wrapper flex flex-column@xs flex-row@sm items-center justify-end flex-gap-xl">
+
+                    <div class="property__picture">
+
+                        <img class="property__image" src="/assets/img/search.svg" alt="location">
+                    </div>
+
+                    <div class="property__block">
+
+                        <h2 class="property__title  title">
+                            Умный поиск машины вашей мечты начинается здесь!
+                        </h2>
+
+                        <div class="property__description">
+
+                            <p class="property__text">
+
+                                Какое автомобиль Вы хотите купить: б/у или новое? Иномарка или&nbsp;отечественный автопром? Внедорожник или&nbsp;седан? Светлый или&nbsp;тёмный? Мы учтём все ваши предпочтения. Наш специалист задаст Вам несколько вопросов и&nbsp;составит список критериев
+                                на основе ответов. Такой подход позволяет нам сделать качественное предложение, достаточно точно сузив круг поиска,<br> а Вам купить б/у автомобиль с&nbsp;учётом важных параметров и&nbsp;характеристик.
+                            </p>
+
+                            <p class="property__text">
+                                Если не удастся найти подходящую машину в&nbsp;наличии в OAV, мы&nbsp;поможем с поиском лучшего варианта на автомобильном рынке. Услуга автоподбора позволит купить автомобиль с пробегом дёшево, сэкономив также Ваше время и силы. Доверьте поиск профессионалу.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Отзывы -->
+        <section class="reviews">
+
+            <div class="reviews__container container max-width-md">
+                <div class="reviews__blocks grid">
+                    <div class="reviews__block flex flex-column items-center@xs items-start@sm col-12@xs col-7@sm">
+                        <h2 class="reviews__title title">
+                            Ваше мнение очень&nbsp;важно для нас
+                        </h2>
+                        <p class="reviews__text-description">
+                            Мы ценим обратную связь от наших клиентов и&nbsp;постоянно совершенствуем наш сервис. О нас оставили уже более 500 отзывов.
+                        </p>
+                        <div class="reviews__links">
+                            <a class="reviews__link btn btn--primary" href="#">
+                    Читать отзывы
+                  </a>
+                        </div>
+                    </div>
+
+                    <div class="reviews__block flex display@sm flex-wrap justify-center@xs justify-between@sm flex-gap-sm col-5@sm">
+
+                        <img class="reviews__image" src="/assets/img/bitmap.png" alt="Avatar">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- <section class="reviews">
+
+            <div class="reviews__container container max-width-md">
+
+                <h2 class="reviews__title title">
+                    Клиенты о нас
                 </h2>
 
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
+                <div class="reviews__blocks flex flex-wrap justify-center@xs justify-between@sm flex-gap-sm">
 
-    <!-- Преимущества -->
+                    <a class="review" href="#">
 
-    <section class="property location">
+                        <div class="review__wrapper">
 
-      <div class="property__container container max-width-md">
+                            <img class="review__avatar" src="<?php echo $config->urls->templates?>img/avatar.svg" alt="Avatar">
 
-        <div class="property__wrapper flex flex-column@xs flex-row@sm items-center justify-end  flex-gap-lg">
+                            <h3 class="review__name-title">Алексей Петров</h3>
 
-          <div class="property__picture">
+                            <p class="review__text-description">
+                                Приобретал автомобиль в Аутлете. Воспоминания остались только положительные. Сопровождал сделку менеджер Павел, ему отдельное спасибо за помощь.
+                            </p>
+                        </div>
+                    </a>
 
-            <img
-              class="property__image"
-              src="/assets/img/location.svg"
-              alt="location"
-            >
-          </div>
-
-          <div class="property__block">
-
-            <h2 class="property__title title">
-              Не тратьте время на разъеды по салонам города!
-            </h2>
-
-            <div class="property__description">
-
-              <p class="property__text">
-                Мы предлагаем широкий выбор из более чем 220 автомобилей,
-                а&nbsp;Ваш&nbsp;автомобиль выкупаем в день обращения.
-              </p>
-
-              <p class="property__text">
-                Мы приобретаем абсолютно любые автомобили, вне зависимости от их марки, модели или пробега. Оценка
-                Вашего транспортного средства составит не более 30 минут.
-              </p>
-
-              <p class="property__text">
-                Мы готовы купить Ваш автомобиль с пробегом в Санкт-Петербурге, даже если Вы не собираетесь ничего
-                приобретать у нас. Денежные средства
-                Вы получаете в течении двух часов.
-              </p>
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <section class="property property--reverse responsibility">
-
-      <div class="property__container container max-width-md">
-
-        <div class="property__wrapper flex  flex-column@xs flex-row@sm items-center justify-end flex-gap-xl">
-
-          <div class="property__picture">
-
-            <img
-              class="property__image"
-              src="/assets/img/responsibility.svg"
-              alt="location"
-            >
-          </div>
-
-          <div class="property__block">
-
-            <h2 class="property__title  title">
-              Мы несем ответственность за&nbsp;каждый автомобиль
-            </h2>
-
-            <div class="property__description">
-
-              <p class="property__text">
-                Предлагаем только надёжные варианты, которые прошли полный технический осмотр и юридическую проверку.
-                Таким образом, в OAV <br>
-                Вы можете купить автомобиль с пробегом, будучи уверенными
-                в его качестве и безопасности сделки.
-              </p>
-
-              <p class="property__text">
-                Наше предложение по цене окончательно <br>
-                и не содержит никаких скрытых платежей.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="property smart">
-
-      <div class="property__container container max-width-md">
-
-        <div class="property__wrapper flex flex-column@xs flex-row@sm items-center justify-end flex-gap-xl">
-
-          <div class="property__picture">
-
-            <img
-              class="property__image"
-              src="/assets/img/search.svg"
-              alt="location"
-            >
-          </div>
-
-          <div class="property__block">
-
-            <h2 class="property__title  title">
-              Умный поиск машины вашей мечты начинается здесь!
-            </h2>
-
-            <div class="property__description">
-
-              <p class="property__text">
-
-                Какое автомобиль Вы хотите купить: б/у или новое? Иномарка
-                или&nbsp;отечественный автопром? Внедорожник или седан? Светлый
-                или&nbsp;тёмный? Мы учтём все ваши предпочтения.
-                Наш специалист задаст Вам несколько вопросов и составит список критериев на основе ответов. Такой
-                подход позволяет нам сделать качественное предложение, достаточно точно сузив круг поиска,<br>
-                а Вам купить б/у автомобиль с учётом важных параметров и характеристик.
-              </p>
-
-              <p class="property__text">
-                Если не удастся найти подходящую машину в наличии в OAV, мы
-                поможем с поиском лучшего варианта на автомобильном рынке.
-                Услуга автоподбора позволит купить автомобиль с пробегом дёшево,
-                сэкономив также Ваше время и силы. Доверьте поиск профессионалу.
-              </p>
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <!-- Отзывы -->
-
-    <section class="reviews">
-
-      <div class="reviews__container container max-width-md">
-
-        <h2 class="reviews__title title">
-          Клиенты о нас
-        </h2>
-
-        <div class="reviews__blocks flex flex-wrap justify-center@xs justify-between@sm flex-gap-sm">
-
-          <a
-            class="review"
-            href="#"
-          >
-
-            <div class="review__wrapper">
-
-              <img
-                class="review__avatar"
-                src="/assets/img/avatar.svg"
-                alt="Avatar"
-              >
-
-              <h3 class="review__name-title">Алексей Петров</h3>
-
-              <p class="review__text-description">
-                Приобретал автомобиль в Аутлете. Воспоминания остались только положительные.
-                Сопровождал сделку менеджер Павел, ему отдельное спасибо за помощь.
-              </p>
-            </div>
-          </a>
-
-          <a
-            class="review"
-            href="#"
-          >
-
-            <img
-              class="review__avatar"
-              src="/assets/img/avatar.svg"
-              alt="Avatar"
-            >
-
-            <h3 class="review__name-title">Алексей Петров</h3>
-
-            <p class="review__text-description">
-              Приобретал автомобиль в Аутлете. Воспоминания остались только положительные.
-              Сопровождал сделку менеджер Павел, ему отдельное спасибо за помощь.
-            </p>
-          </a>
-
-          <a
-            class="review"
-            href="#"
-          >
-
-            <img
-              class="review__avatar"
-              src="/assets/img/avatar.svg"
-              alt="Avatar"
-            >
-
-            <h3 class="review__name-title">Алексей Петров</h3>
-
-            <p class="review__text-description">
-              Приобретал автомобиль в Аутлете. Воспоминания остались только положительные.
-              Сопровождал сделку менеджер Павел, ему отдельное спасибо за помощь.
-            </p>
-          </a>
-
-          <a
-            class="review"
-            href="#"
-          >
-
-            <img
-              class="review__avatar"
-              src="/assets/img/avatar.svg"
-              alt="Avatar"
-            >
-
-            <h3 class="review__name-title">Алексей Петров</h3>
-
-            <p class="review__text-description">
-              Приобретал автомобиль в Аутлете. Воспоминания остались только положительные.
-              Сопровождал сделку менеджер Павел, ему отдельное спасибо за помощь.
-            </p>
-          </a>
-        </div>
-
-        <div class="reviews__links">
-
-          <a
-            class="reviews__link btn btn--primary"
-            href="#"
-          >
-            Все отзывы
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Карта -->
-
-    <section class="map">
-      <!-- Здесь будет карта -->
-
-      <div class="map__element-block">
-        <script
-          class="map__element-frame"
-          type="text/javascript"
-          charset="utf-8"
-          async
-          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7e3802c468fab21c8025bed6317f353b460d5c922b361a156415a7bf5f377e23&amp;width=100%25&amp;height=568&amp;lang=ru_RU&amp;scroll=false"
-        ></script>
-      </div>
-
-      <!-- Блок на карте -->
-
-      <div class="map__container">
-
-        <div class="map__address">
-
-          <h2 class="map__title title">
-            Мы ждем вас по&nbsp;адресу:
-          </h2>
-
-          <p class="map__description">
-            Пересечение 8 Верхнего переулка и пр. Культуры
-            (напротив пр. Культуры 50Б)
-          </p>
-        </div>
-      </div>
-
-      <a
-        class="map__element-link"
-        href="https://yandex.ru/maps/?um=constructor%3A7e3802c468fab21c8025bed6317f353b460d5c922b361a156415a7bf5f377e23&amp;source=constructorStatic"
-        target="_blank"
-      >
-
+                    <a class="review" href="#">
+    
         <img
-          class="map__element-image"
-          src="/assets/img/oav_map--mobile.jpeg"
-          alt=""
-          style="border: 0;"
-        /></a>
+          class="review__avatar"
+          src="<?php echo $config->urls->templates?>img/avatar.svg"
+          alt="Avatar"
+        >
+    
+        <h3 class="review__name-title">Алексей Петров</h3>
+    
+        <p class="review__text-description">
+          Приобретал автомобиль в Аутлете. Воспоминания остались только положительные.
+          Сопровождал сделку менеджер Павел, ему отдельное спасибо за помощь.
+        </p>
+        </a>
 
-      <a
-        class="map-element__link"
-        href="https://yandex.ru/maps/?um=constructor%3A7e3802c468fab21c8025bed6317f353b460d5c922b361a156415a7bf5f377e23&amp;source=constructorStatic"
-        target="_blank"
-      >
-
+                    <a class="review" href="#">
+    
         <img
-          class="map-element__image"
-          src="/assets/img/oav_map--tablet.jpeg"
-          alt=""
-          style="border: 0;"
-        /></a>
-    </section>
-  </main>
+          class="review__avatar"
+          src="<?php echo $config->urls->templates?>img/avatar.svg"
+          alt="Avatar"
+        >
+    
+        <h3 class="review__name-title">Алексей Петров</h3>
+    
+        <p class="review__text-description">
+          Приобретал автомобиль в Аутлете. Воспоминания остались только положительные.
+          Сопровождал сделку менеджер Павел, ему отдельное спасибо за помощь.
+        </p>
+        </a>
 
-  <footer class="main-footer">
+                    <a class="review" href="#">
+    
+        <img
+          class="review__avatar"
+          src="<?php echo $config->urls->templates?>img/avatar.svg"
+          alt="Avatar"
+        >
+    
+        <h3 class="review__name-title">Алексей Петров</h3>
+    
+        <p class="review__text-description">
+          Приобретал автомобиль в Аутлете. Воспоминания остались только положительные.
+          Сопровождал сделку менеджер Павел, ему отдельное спасибо за помощь.
+        </p>
+        </a>
+                </div>
 
-    <div class="main-footer__container container max-width-lg">
+                <div class="reviews__links">
 
-      <!-- Блоки -->
+                    <a class="reviews__link btn btn--primary" href="#">
+        Все отзывы
+        </a>
+                </div>
+            </div>
+        </section> -->
+        <!-- Карта -->
+        <section class="map">
+            <!-- Здесь будет карта -->
+            <div class="map__element-block">
+                <script class="map__element-frame" type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7e3802c468fab21c8025bed6317f353b460d5c922b361a156415a7bf5f377e23&amp;width=100%25&amp;height=568&amp;lang=ru_RU&amp;scroll=false"></script>
+            </div>
 
-      <div class="main-footer__blocks flex justify-between flex-gap-md flex-column@xs flex-row@sm">
+            <!-- Блок на карте -->
 
-        <!-- Информация -->
+            <div class="map__container">
 
-        <div class="main-footer__information">
+                <div class="map__address">
 
-          <div class="main-footer__wrapper-pictures">
+                    <h2 class="map__title title">
+                        Мы ждем вас по&nbsp;адресу:
+                    </h2>
 
-            <img
-              class="image"
-              src="/assets/img/logo.svg"
-              alt="Outlet Auto Village"
-            >
-          </div>
+                    <p class="map__description">
+                        Пересечение 8 Верхнего переулка и пр. Культуры (напротив пр. Культуры 50Б)
+                    </p>
+                </div>
+            </div>
 
-          <div class="main-footer__wrapper-information">
+            <a class="map__element-link" href="https://yandex.ru/maps/?um=constructor%3A7e3802c468fab21c8025bed6317f353b460d5c922b361a156415a7bf5f377e23&amp;source=constructorStatic" target="_blank">
 
-            <a
-              class="main-footer__phone link"
-              href="tel:+78124459713"
-            >
+                <img class="map__element-image" src="/assets/img/oav_map--mobile.jpeg" alt="" style="border: 0;" /></a>
+
+            <a class="map-element__link" href="https://yandex.ru/maps/?um=constructor%3A7e3802c468fab21c8025bed6317f353b460d5c922b361a156415a7bf5f377e23&amp;source=constructorStatic" target="_blank">
+
+                <img class="map-element__image" src="/assets/img/oav_map--tablet.jpeg" alt="" style="border: 0;" /></a>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+
+        <div class="main-footer__container container max-width-lg">
+
+            <!-- Блоки -->
+
+            <div class="main-footer__blocks flex justify-between flex-gap-md flex-column@xs flex-row@sm">
+
+                <!-- Информация -->
+
+                <div class="main-footer__information">
+
+                    <div class="main-footer__wrapper-pictures">
+
+                        <img class="image" src="/assets/img/logo.svg" alt="Outlet Auto Village">
+                    </div>
+
+                    <div class="main-footer__wrapper-information">
+
+                        <a class="main-footer__phone link" href="tel:+78124459713">
               +7 812 445-97-13
             </a>
 
-            <a
-              class="main-footer__email link"
-              href="mailto:info@outletautovillage.ru"
-            >
+                        <a class="main-footer__email link" href="mailto:info@outletautovillage.ru">
               info@outletautovillage.ru
             </a>
-          </div>
-        </div>
+                    </div>
+                </div>
 
-        <!-- Услуги -->
+                <!-- Услуги -->
 
-        <div class="services">
+                <div class="services">
 
-          <h3 class="services__title main-footer__title">
-            Услуги
-          </h3>
+                    <h3 class="services__title main-footer__title">
+                        Услуги
+                    </h3>
 
-          <ul class="services__list">
+                    <ul class="services__list">
 
-            <li class="services__item">
+                        <li class="services__item">
 
-              <a
-                href="#"
-                class="services__link main-footer__link"
-              >
-                Продажа автомобилей с пробегом
+                            <a href="#" class="services__link main-footer__link">
+                Продажа автомобилей с&nbsp;пробегом
               </a>
-            </li>
+                        </li>
 
-            <li class="services__item">
+                        <li class="services__item">
 
-              <a
-                href="#"
-                class="services__link main-footer__link"
-              >
-                Выкуп автомобилей с пробегом
+                            <a href="#" class="services__link main-footer__link">
+                Выкуп автомобилей с&nbsp;пробегом
               </a>
-            </li>
+                        </li>
 
-            <li class="services__item">
+                        <li class="services__item">
 
-              <a
-                href="#"
-                class="services__link main-footer__link"
-              >
+                            <a href="#" class="services__link main-footer__link">
                 Выкуп коммерческих авто
               </a>
-            </li>
+                        </li>
 
-            <li class="services__item">
+                        <li class="services__item">
 
-              <a
-                href="#"
-                class="services__link main-footer__link"
-              >
+                            <a href="#" class="services__link main-footer__link">
                 Трейд-ин
               </a>
-            </li>
+                        </li>
 
-            <li class="services__item">
+                        <li class="services__item">
 
-              <a
-                href="#"
-                class="services__link main-footer__link"
-              >
+                            <a href="#" class="services__link main-footer__link">
                 Автострахование
               </a>
-            </li>
+                        </li>
 
-            <li class="services__item">
+                        <li class="services__item">
 
-              <a
-                href="#"
-                class="services__link main-footer__link"
-              >
+                            <a href="#" class="services__link main-footer__link">
                 Автокредитование
               </a>
-            </li>
-          </ul>
-        </div>
+                        </li>
+                    </ul>
+                </div>
 
-        <!-- Компания -->
+                <!-- Компания -->
 
-        <div class="company">
+                <div class="company">
 
-          <h3 class="company__title main-footer__title">
-            Компания
-          </h3>
+                    <h3 class="company__title main-footer__title">
+                        Компания
+                    </h3>
 
-          <ul class="company__list">
+                    <ul class="company__list">
 
-            <li class="company__item">
+                        <li class="company__item">
 
-              <a
-                href="#"
-                class="company__link main-footer__link"
-              >
+                            <a href="#" class="company__link main-footer__link">
                 О нас
               </a>
-            </li>
+                        </li>
 
-            <li class="company__item">
+                        <li class="company__item">
 
-              <a
-                href="#"
-                class="company__link main-footer__link"
-              >
+                            <a href="#" class="company__link main-footer__link">
                 Почему выбирают нас
               </a>
-            </li>
+                        </li>
 
-            <li class="company__item">
+                        <li class="company__item">
 
-              <a
-                href="#"
-                class="company__link main-footer__link"
-              >
+                            <a href="#" class="company__link main-footer__link">
                 Акции
               </a>
-            </li>
+                        </li>
 
-            <li class="company__item">
+                        <li class="company__item">
 
-              <a
-                href="#"
-                class="company__link main-footer__link"
-              >
+                            <a href="#" class="company__link main-footer__link">
                 Документы
               </a>
-            </li>
+                        </li>
 
-            <li class="company__item">
+                        <li class="company__item">
 
-              <a
-                href="#"
-                class="company__link main-footer__link"
-              >
+                            <a href="#" class="company__link main-footer__link">
                 Отзывы
               </a>
-            </li>
+                        </li>
 
-            <li class="company__item">
+                        <li class="company__item">
 
-              <a
-                href="#"
-                class="company__link main-footer__link"
-              >
+                            <a href="#" class="company__link main-footer__link">
                 Контакты
               </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-      <div class="main-footer__blocks flex flex-column">
+            <div class="main-footer__blocks flex flex-column">
 
-        <div class="main-footer__socials">
+                <div class="main-footer__socials">
 
-          <ul class="socials__list flex flex-gap-sm justify-center ">
+                    <ul class="socials__list flex flex-gap-sm justify-center ">
 
-            <li class="socials__item">
+                        <li class="socials__item">
 
-              <a
-                href="instagram.ru"
-                class="socials__link"
-              >
+                            <a href="instagram.ru" class="socials__link">
                 Инстаграм
 
                 <img
@@ -746,14 +586,11 @@
                   alt="instagram"
                 >
               </a>
-            </li>
+                        </li>
 
-            <li class="socials__item">
+                        <li class="socials__item">
 
-              <a
-                href="vkontakte.com"
-                class="socials__link"
-              >
+                            <a href="vkontakte.com" class="socials__link">
                 Вконтакте
 
                 <img
@@ -762,14 +599,11 @@
                   alt="vkontakte"
                 >
               </a>
-            </li>
+                        </li>
 
-            <li class="socials__item">
+                        <li class="socials__item">
 
-              <a
-                href="facebook.com"
-                class="socials__link"
-              >
+                            <a href="facebook.com" class="socials__link">
                 Фейсбук
 
                 <img
@@ -778,33 +612,28 @@
                   alt="facebook"
                 >
               </a>
-            </li>
-          </ul>
-        </div>
+                        </li>
+                    </ul>
+                </div>
 
-        <div class="main-footer__copyright copyright flex flex-wrap justify-center">
+                <div class="main-footer__copyright copyright flex flex-wrap justify-center">
 
-          <p class="copyright__text">
-            © 2018 ООО «Аутлет Ауто Вилладж»
-          </p>
+                    <p class="copyright__text">
+                        © 2018 ООО «Аутлет Ауто Вилладж»
+                    </p>
 
-          <a
-            class="copyright__link main-footer__link"
-            href="#"
-          >
+                    <a class="copyright__link main-footer__link" href="#">
             Пользовательское соглашение
           </a>
 
-          <a
-            class="copyright__link main-footer__link"
-            href="#"
-          >
+                    <a class="copyright__link main-footer__link" href="#">
             &nbsp;Политика конфиденциальности
           </a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </footer>
-  <script src="assets/js/scripts.js"></script>
+    </footer>
+    <script src="assets/js/scripts.js"></script>
 </body>
+
 </html>

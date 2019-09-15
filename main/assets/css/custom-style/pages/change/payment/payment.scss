@@ -1,0 +1,158 @@
+@include breakpoint (xs) {
+    .payment {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 100%;
+        margin-top: 96px;
+        padding: 48px 24px;
+    }
+}
+
+@include breakpoint (sm) {
+    .payment {
+        padding: 48px 80px;
+    }
+}
+
+@include breakpoint(xs) {
+    .payment__block-info {
+        flex-wrap: wrap
+    }
+}
+
+@include breakpoint(sm) {
+    .payment__block-info {
+        flex-wrap: nowrap;
+    }
+}
+
+@include breakpoint(xs) {
+    .payment__wrapper {
+        flex-basis: 100%;
+    }
+}
+
+@include breakpoint(xs) {
+    .payment__title {
+        font-size: 20px;
+    }
+}
+
+@include breakpoint(sm) {
+    .payment__title {
+        font-size: 24px;
+    }
+}
+
+.payment__price {
+    position: relative;
+    width: 60%;
+    height: 87px;
+    padding-right: 24px;
+    font-weight: 800;
+    text-align: right;
+}
+
+@include breakpoint(xs) {
+    .payment__price {
+        width: calc(100% - 53px);
+        margin-top: 16px;
+        text-align: center;
+    }
+}
+
+@include breakpoint(sm) {
+    .payment__price {
+        width: calc(70% - 53px);
+        margin-top: 0;
+        text-align: right;
+    }
+}
+
+.payment__price::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 54px;
+    top: 0;
+    height: 88px;
+    left: -52px;
+    background-image: url(/assets/img/ticket.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.payment__from {
+    font-size: 16px;
+}
+
+@include breakpoint(xs) {
+    .payment__to {
+        font-size: 20px;
+    }
+}
+
+@include breakpoint(sm) {
+    .payment__to {
+        font-size: 24px;
+    }
+}
+
+.payment__form-title {
+    font-size: 20px;
+    font-weight: 800;
+    flex-basis: 100%;
+    text-transform: none;
+}
+
+.payment__form {
+    flex-basis: 100%;
+}
+
+@include breakpoint(xs) {
+    .form-payment__name {
+        flex-basis: calc(100% - 12px);
+    }
+    .form-payment__phone {
+        flex-basis: calc(100% - 12px);
+    }
+    .form-payment__email {
+        flex-basis: calc(100% - 12px);
+    }
+    .form-payment__years {
+        flex-basis: calc(100% - 12px);
+    }
+}
+
+@include breakpoint(sm) {
+    .form-payment__name {
+        flex-basis: calc(50% - 12px);
+    }
+    .form-payment__phone {
+        flex-basis: calc(50% - 12px);
+        margin-left: 24px;
+    }
+    .form-payment__email {
+        flex-basis: calc(50% - 12px);
+    }
+    .form-payment__years {
+        flex-basis: calc(50% - 12px);
+        margin-left: 24px;
+    }
+}
+
+.payment__control {
+    padding-right: calc(var(--select-icon-size) + var(--select-icon-right-margin) * 2);
+    padding-top: var(--select-icon-size);
+    padding-bottom: var(--select-icon-size);
+}
+
+.payment__button {
+    box-shadow: none;
+    margin-top: 32px;
+    font-weight: 700;
+}
+
+.form-payment__icon {
+    top: 57% !important;
+}

@@ -5,24 +5,23 @@
 @import 'custom-style/icons';
 @import 'custom-style/buttons';
 @import 'custom-style/forms';
-
-
 // Styles pages in folder page
 @import 'custom-style/pages/main/blocks/hero-image/hero-image.scss';
 @import 'custom-style/pages/main/blocks/advantages/advantages.scss';
 @import 'custom-style/pages/main/blocks/reviews/reviews.scss';
 @import 'custom-style/pages/main/blocks/map/map.scss';
-
 // page "change"
 @import 'custom-style/pages/change/search/search.scss';
 @import 'custom-style/pages/change/features/features.scss';
 @import 'custom-style/pages/change/trade/trade.scss';
 @import 'custom-style/pages/change/steps/steps.scss';
-
+@import 'custom-style/pages/change/payment/payment.scss';
 // page "buy"
-@import 'custom-style/pages/buy/ready-buy/ready-buy.scss';
 @import 'custom-style/pages/buy/request-test/request-test.scss';
-
+// page "sale"
+@import 'custom-style/pages/sale/ready-buy/ready-buy.scss';
 // Parts folder reusable
 @import 'custom-style/pages/parts/header/header.scss';
 @import 'custom-style/pages/parts/footer/footer.scss';
+// PW-style
+@import 'custom-style/pages/parts/outletStyleContent/outletStyleContent.scss';
