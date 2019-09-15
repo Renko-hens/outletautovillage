@@ -1,16 +1,14 @@
 .reviews {
     padding: 48px 0;
-    background-color: var(--color-bg-low);
 }
 
 @include breakpoint(sm) {
-  .reviews {
-    padding: 96px 0;
-  }
+    .reviews {
+        padding: 96px 0;
+    }
 }
 
 .reviews__blocks {
-    background-color: var(--color-main);
     border-radius: 4px;
     padding: 76px 48px 56px 72px;
 }

@@ -1,20 +1,15 @@
 .steps {
     padding: 48px 0 48px 0;
-
-    background-color: var(--color-bg-low);
 }
 
 @include breakpoint(sm) {
     .steps {
         padding: 48px 0 104px 0;
-    
-        background-color: var(--color-bg-low);
-    }     
+    }
 }
 
 .steps__title {
     font-weight: 800;
-    color: var(--color-black);
 }
 
 .steps__list {
@@ -23,14 +18,13 @@
 
 @include breakpoint(sm) {
     .steps__list {
-        margin-top: 80px;  
+        margin-top: 80px;
     }
 }
 
 .step__item {
     position: relative;
     flex-basis: 25%;
-    
     text-align: center;
 }
 
@@ -97,61 +91,50 @@
 .step__wrapper {
     position: relative;
     z-index: 1;
-
     width: 144px;
     height: 144px;
-
     border-radius: 50%;
-
     background-color: white;
-    box-shadow: 5px 5px 12px rgba(148,158,206,0.5);
+    box-shadow: 5px 5px 12px rgba(148, 158, 206, 0.5);
 }
 
 @include breakpoint(xs) {
-    .step__empty-block{
+    .step__empty-block {
         display: none;
     }
 }
 
 @include breakpoint(sm) {
-.step__empty-block{
-    display: block;
-    position: absolute;
-    z-index: 0;
-    top: 23%;
-    left: -10.9%;
-    width: 32px;
-    height: 16px;
-    background-color: var(--color-warning)
-}
+    .step__empty-block {
+        display: block;
+        position: absolute;
+        z-index: 0;
+        top: 23%;
+        left: -10.9%;
+        width: 32px;
+        height: 16px;
+        background-color: var(--color-warning)
+    }
 }
 
 .step__number {
     position: absolute;
     top: 50%;
     left: 50%;
-
     transform: translateX(-50%) translateY(-50%);
-
     font-weight: 900;
     font-size: 72px;
-
     color: var(--color-primary);
-
 }
 
 .step__description {
     max-width: 320px;
     margin-top: 32px;
-
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
     line-height: 20px;
     text-align: center;
-
-    color: #5A5A5A;
-
 }
 
 @include breakpoint (xs) {

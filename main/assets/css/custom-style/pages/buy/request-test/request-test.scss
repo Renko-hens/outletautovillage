@@ -1,81 +1,79 @@
 @include breakpoint (xs) {
-  .request-test {
-    padding: 48px 0;
-    background-color: var(--color-warning);
-  }
+    .request-test {
+        padding: 48px 0;
+    }
 }
 
 @include breakpoint (sm) {
-  .request-test {
-    padding: 104px 0;
-  }
+    .request-test {
+        padding: 104px 0;
+    }
 }
 
 .request-test__form-title {
-  font-size: 24px;
-  color: var(--color-black);
+    font-size: 24px;
+    color: var(--color-black);
 }
 
 .request-test__wrapper {
-  padding: 32px;
-  margin: 0 auto;
-  
-  background-color: var(--color-bg);
+    padding: 32px;
+    margin: 0 auto;
+    background-color: var(--color-bg);
 }
 
 @media (min-width: 540px) {
-  .request-test__wrapper {
-    max-width: 540px;
-  }
+    .request-test__wrapper {
+        max-width: 540px;
+    }
 }
 
 .form-drive {
-  margin-top: 32px;
+    margin-top: 32px;
 }
 
 .form-drive__wrapper-input {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .form-label {
-  font-size: 16px;
-  margin-bottom: 8px;
+    font-size: 16px;
+    margin-bottom: 8px;
 }
 
 .form-drive__controls {
-  margin-top: 32px;
+    margin-top: 32px;
 }
 
 .form-drive__button {
-  font-weight: 700;
-  box-shadow: 0 0px 10px var(--color-shadow);
+    font-weight: 700;
+    box-shadow: 0 0px 10px var(--color-shadow);
 }
 
 @include breakpoint(xs) {
-  .form-drive__button {
-    width: 100%;
-  }
+    .form-drive__button {
+        width: 100%;
+    }
 }
 
 @include breakpoint(sm) {
-  .form-drive__button {
-    width: auto;
-  }
+    .form-drive__button {
+        width: auto;
+    }
 }
 
 @include breakpoint(xs) {
-  .rating {
-    padding: 32px 16px;
-    background-color: transparent;
-  }
+    .rating {
+        padding: 32px 16px;
+        background-color: transparent;
+    }
 }
 
 .rating__block {
-  max-width: 285px;
-  margin-left: 72px;
+    max-width: 285px;
+    margin-left: 72px;
 }
 
 .rating__title {
-  color: var(--color-black);
+    color: var(--color-black);
 }
