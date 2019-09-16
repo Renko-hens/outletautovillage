@@ -1,0 +1,138 @@
+.company {
+    padding: 80px 0;
+}
+
+.company__title {
+    text-align: center;
+    text-transform: none;
+}
+
+.company__sub-title {
+    text-align: center;
+    font-size: 20px;
+}
+
+@include breakpoint (xs) { 
+    .team__wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@include breakpoint (sm) { 
+    .team__wrapper {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+.team__item-label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+@include breakpoint (xs) { 
+    .team__item-label{
+        flex-basis: 100%;
+    }
+}
+
+@include breakpoint (sm) { 
+    .team__item-label {
+
+        flex-basis: 30%;
+    }
+}
+
+@include breakpoint (xs) { 
+    .team__item-label:before {
+        display: none;
+    }
+}
+
+@include breakpoint (sm) { 
+    .team__item-label:before {
+        position: absolute;
+        display: block;
+        content: "";
+        background-image: url("/assets/img/icon52.png");
+        width: 30%;
+        height: 90%;
+        background-repeat: no-repeat;
+        background-position: top 40px center;
+    }
+}
+
+
+.team__label-title {
+    font-weight: 600;
+}
+
+@include breakpoint (xs) { 
+    .team__label-title {
+        margin-top: 32px;
+    }
+}
+
+@include breakpoint (sm) { 
+    .team__label-title {
+        margin-top: 140px;
+    }
+}
+
+.team__item-name {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@include breakpoint (xs) { 
+    .team__item-name {
+        flex-basis: 100%;
+        
+        justify-content: center;
+    }
+}
+
+@include breakpoint (sm) { 
+    .team__item-name {
+        flex-basis: 70%;
+        margin-right: -16px;
+        justify-content: flex-start;
+    }
+}
+
+.team__item-image {
+    position: relative;
+}
+
+@include breakpoint (xs) {
+    .team__item-image {
+        flex-basis: 100%;
+    }
+}
+
+@include breakpoint (sm) {
+    .team__item-image {
+        margin-right: 16px; 
+        flex-basis: calc(33.3333% - 16px);
+    }
+}
+
+.team__item-text {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    padding: 12px;
+}
+
+.team__item-title {
+    font-size: 12px;
+}
+
+.team__item-sub-title {
+    font-size: 10px;
+}

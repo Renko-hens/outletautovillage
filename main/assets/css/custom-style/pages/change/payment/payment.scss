@@ -3,7 +3,6 @@
         display: flex;
         flex-wrap: wrap;
         flex-basis: 100%;
-        margin-top: 96px;
         padding: 48px 24px;
     }
 }
@@ -77,7 +76,7 @@
     top: 0;
     height: 88px;
     left: -52px;
-    background-image: url(/assets/img/ticket.svg);
+    background-image: url("/site/templates/img/ticket.svg");
     background-repeat: no-repeat;
     background-size: 100%;
 }
