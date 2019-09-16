@@ -17,7 +17,6 @@
     }
 }
 
-
 @include breakpoint (sm) {
     .choice {
         position: relative;
@@ -55,7 +54,6 @@
         min-width: 570px;
     }
 }
-
 
 .choice__car-wrapper {
     max-width: 590px;
