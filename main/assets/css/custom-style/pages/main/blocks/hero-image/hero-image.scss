@@ -1,7 +1,7 @@
 .hero-image {
   padding: 144px 0 48px 0;
 
-  background-image: url("/assets/img/hero-image.jpg");
+  background-image: url("/img/hero-image.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -73,7 +73,7 @@
 @media (min-width: 1024px) {
   // Анимация при наведения мышки
   .opportunities__link:nth-child(1) {
-    background-image: url("/assets/img/yellow_o.svg");
+    background-image: url("/img/yellow_o.svg");
     background-position: -480px center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -91,7 +91,7 @@
 @media (min-width: 1024px) {
   // Анимация при убирания мышки с ховера
   .opportunities__link:nth-child(2) {
-    background-image: url("/assets/img/yellow_a.svg");
+    background-image: url("/img/yellow_a.svg");
     background-position: center 340px;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -108,7 +108,7 @@
 
 @media (min-width: 1024px) {
   .opportunities__link:nth-child(3) {
-    background-image: url("/assets/img/yellow_v.svg");
+    background-image: url("/img/yellow_v.svg");
     background-position: center -400px;
     background-repeat: no-repeat;
     background-size: 100%;
