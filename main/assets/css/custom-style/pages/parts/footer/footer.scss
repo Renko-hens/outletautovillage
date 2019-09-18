@@ -13,6 +13,34 @@
   margin-top: 16px;
 }
 
+.main-footer__phone::before {
+  content: "";
+  display: inline-block;
+  vertical-align: baseline;
+  width: 15px;
+  height: 15px;
+  margin-right: 8px;
+  background-image: url("/assets/img/group-3.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.main-footer__email::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 15px;
+  height: 15px;
+  margin-right: 8px;
+  background-image: url("/assets/img/image-1.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
 .services {
   margin-top: 24px;
   font-size: 16px

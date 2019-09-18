@@ -8,7 +8,7 @@
     padding: 144px 0 48px 0;
 
     text-align: center;
-    height: 30vh;
+    min-height: 30vh;
 }
 
 .banner__title {
@@ -18,4 +18,5 @@
 
 .banner__sub-title {
     margin-top: 8px;
+    font-weight: 600;
 }

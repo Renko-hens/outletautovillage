@@ -48,6 +48,7 @@
     font-weight: 700;
 }
 
+// 
 .property__full-description {
     margin-top: 32px;
 }
@@ -58,7 +59,18 @@
     font-weight: 700;
 }
 
+// 
+.property__list-partners {
+    margin-top: 8px;
+    padding-top: 16px;
+}
+
+.property__list-partners + .property__list-partners {
+    margin-top: 40px;
+}
+
 .property__list-title {
+    margin-top: 16px;
     font-size: 20px;
     font-weight: 700;
     text-transform: none;
@@ -72,4 +84,37 @@
 
 .property__item-number {
     font-size: 16px;
+}
+
+.property__image {
+    min-width: 190px;
+}
+
+//
+
+.property__list-documents {
+    margin-top: 32px;
+}
+
+@include breakpoint(sm){
+    .property__item-documents {
+        margin-top: 16px;
+    }
+}
+
+.property__image-documents {
+    display: block;
+    max-width: 120px;
+    margin: 0 auto;
+}
+
+.property__title-documents {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 16px;
+}
+
+.property__link-documents {
+    margin-top: 16px;
 }

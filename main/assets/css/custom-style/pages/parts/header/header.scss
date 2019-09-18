@@ -119,12 +119,13 @@
 @include breakpoint(sm) {
   .navigation__list {
     flex-direction: row;
+    align-items: center;
     justify-content: flex-start;
   }
 }
 
 .navigation__item {
-  margin-right: 16px;
+  margin-right: 12px;
   
 }
 
@@ -218,7 +219,7 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     margin: 0 auto;
-    padding:  8px 4px;
+    padding: 8px 4px 8px 172px;
   }
 }
 

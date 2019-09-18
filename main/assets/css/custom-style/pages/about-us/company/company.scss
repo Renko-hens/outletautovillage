@@ -99,6 +99,7 @@
 @include breakpoint (sm) { 
     .team__item-name {
         flex-basis: 70%;
+        margin-top: 24px;
         margin-right: -16px;
         justify-content: flex-start;
     }
@@ -110,6 +111,7 @@
 
 @include breakpoint (xs) {
     .team__item-image {
+        border: 1px solid lightgray;
         flex-basis: 100%;
     }
 }

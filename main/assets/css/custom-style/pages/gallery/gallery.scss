@@ -1,0 +1,34 @@
+.gallery {
+    padding: 40px 0;
+}
+
+.gallery__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery__link {
+    text-decoration: none;
+}
+
+.gallery__title {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.gallery__title--strong {
+    font-size: 24px;
+    text-align: center;
+}
+
+.gallery__image {
+    margin-top: 8px;
+}
+
+.gallery__link:focus .gallery__image,
+.gallery__image:hover {
+    filter: brightness(.6);
+    transition: filter .2s,
+}
+

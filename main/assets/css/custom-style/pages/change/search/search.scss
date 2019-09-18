@@ -167,6 +167,13 @@
   }
 }
 
+@media (min-width: 1165px) {
+  .search__background-V {
+    max-width: 470px;
+    bottom: -33%;
+  }
+}
+
 @media (min-width: 1440px) {
   .search__background {
     right: 20%;
