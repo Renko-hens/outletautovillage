@@ -44,3 +44,22 @@
     background-repeat: no-repeat;
     background-size: 100%;
 }
+
+.feature__item--light-icon {
+    display: flex;
+    align-items: center;
+    flex-basis: 380px;
+    margin-top: 24px;
+}
+
+.feature__item--light-icon::before {
+    content: "";
+    display: inline-block;
+    min-width: 40px;
+    min-height: 40px;
+    margin-right: 24px;
+
+    background-image: url('/img/check--light.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}

@@ -1,0 +1,14 @@
+.service {
+    padding: 144px 0 48px 0;
+}
+
+.service__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.service__title {
+    margin-top: 8px;
+}
