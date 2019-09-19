@@ -11,9 +11,6 @@
 @import 'custom-style/pages/main/blocks/reviews/reviews.scss';
 @import 'custom-style/pages/main/blocks/map/map.scss';
 
-// Global styles 
-@import 'custom-style/pages/parts/global/global.scss';
-
 // page "change"
 @import 'custom-style/pages/change/search/search.scss';
 @import 'custom-style/pages/change/features/features.scss';
@@ -40,5 +37,9 @@
 // Parts folder reusable
 @import 'custom-style/pages/parts/header/header.scss';
 @import 'custom-style/pages/parts/footer/footer.scss';
+
+// Global styles 
+@import 'custom-style/pages/parts/global/global.scss';
+
 // PW-style
-@import 'custom-style/pages/parts/outletStyleContent/outletStyleContent.scss';
+@import 'custom-style/pages/parts/outletStyleContent/_outletStyleContent.scss';
