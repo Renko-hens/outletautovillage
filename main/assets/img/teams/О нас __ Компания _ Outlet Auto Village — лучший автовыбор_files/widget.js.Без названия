@@ -1,0 +1,49 @@
+var feedback_vk = { 
+    idBox: 'feedback_vk',
+    gid: '1',
+    count: '5',
+    style: 'standart',
+    url_wiget: 'https://feedbackcloud.kupiapp.ru/widget/widget.php', 
+    init: function(obj) { 
+        if (!obj.id) { obj.id = this.idBox; }
+        if (!obj.gid) { obj.gid = this.gid; }
+        if (!obj.count) { obj.count = this.count; }
+
+        switch (obj.style) {
+          case 'standart':
+            obj.style = this.style;
+            break;
+          default:
+            obj.style = this.style;
+        }
+
+        if (document.getElementById(obj.id)) { 
+            this.addStyle(obj); 
+            try { 
+                var XHR = ("onload" in new XMLHttpRequest())?XMLHttpRequest:XDomainRequest; 
+                var xhr = new XHR(); 
+                xhr.open('GET', this.url_wiget+'?gid='+obj.gid+'&style='+obj.style+'&count='+obj.count, true); 
+                xhr.onload = function() { 
+                    if (this.response) { 
+                        document.getElementById(obj.id).innerHTML = this.response; 
+                    } 
+                } 
+                xhr.onerror = function() { console.log('onerror '+this.status); } 
+                xhr.send(); 
+            } catch(e) {} 
+        }
+        else { console.log('Блок с id "'+obj.id+'" не найден на странице'); } 
+    }, 
+    addStyle: function(obj) { 
+        switch (obj.style) {
+          case 'standart':
+            var url_style = 'https://feedbackcloud.kupiapp.ru/widget/styles/standart_feedback.css?1';
+            break;
+        }
+        style = document.createElement('link'); 
+        style.rel = 'stylesheet'; 
+        style.type = 'text/css'; 
+        style.href = url_style; 
+        document.head.appendChild(style); 
+    }, 
+};
