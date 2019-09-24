@@ -1,0 +1,548 @@
+jQuery(document).ready(function($){
+	var MQL = 1170;
+	if($(window).width() > MQL) {
+		var headerHeight = $('.b-header').height();
+		$(window).on('scroll',
+		{
+	        previousTop: 0
+	    }, 
+	    function () {
+		    var currentTop = $(window).scrollTop();
+		    //check if user is scrolling up
+		    if (currentTop < this.previousTop ) {
+		    	//if scrolling up...
+		    	if (currentTop > 0 && $('.b-header').hasClass('is-fixed')) {
+		    		$('.b-header').addClass('is-visible');
+		    	} else {
+		    		$('.b-header').removeClass('is-visible is-fixed');
+		    	}
+		    } else {
+		    	//if scrolling down...
+		    	$('.b-header').removeClass('is-visible');
+		    	if( currentTop > headerHeight && !$('.b-header').hasClass('is-fixed')) $('.b-header').addClass('is-fixed');
+		    }
+		    this.previousTop = currentTop;
+		});
+	}
+
+	//open/close primary navigation
+	$('.b-primary-nav-trigger').on('click', function(){
+		$('.b-menu-icon').toggleClass('is-clicked'); 
+		$('.b-header').toggleClass('menu-is-open');
+		
+		//in firefox transitions break when parent overflow is changed, so we need to wait for the end of the trasition to give the body an overflow hidden
+		if( $('.b-primary-nav').hasClass('is-visible') ) {
+			$('.b-primary-nav').removeClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
+				$('body').removeClass('overflow-hidden');
+			});
+		} else {
+			$('.b-primary-nav').addClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
+				$('body').addClass('overflow-hidden');
+			});	
+		}
+	});
+	
+	// Работа пунктов меню на странице Реактивная Весна
+	/*
+	var weDoActionsContainer = document.getElementById('reactiveSpringNav');
+	var weDoActions = Array.from(document.querySelectorAll('.b-secondary-nav li a'));
+	var weDoProducts = document.querySelectorAll('.b-main-content .b-exhibition');
+	weDoActionsContainer.addEventListener('click', function(event) {
+		if (weDoActions.indexOf(event.target) < 3) {
+			for (var i = 0; i < weDoProducts.length; i++) {
+				weDoActions[i].classList.remove('active');	
+				weDoProducts[i].style.display = 'none';
+			}
+			weDoActions[weDoActions.indexOf(event.target)].classList.add('active');
+			weDoProducts[weDoActions.indexOf(event.target)].style.display = 'block';
+			return false;
+		}
+	});	
+	*/
+	
+	var weDoFooterActionsContainer = document.getElementById('reactiveSpringFooterNav');
+	var weDoFooterActions = Array.from(document.querySelectorAll('#reactiveSpringFooterNav li a'));
+	/*
+	document.querySelectorAll('#reactiveSpringFooterNav li a').forEach(function (entry) {
+		  entry.addEventListener("click", function (event){
+		    //event.preventDefault();
+			//$('.b-primary-nav').removeClass('is-visible');
+		  });
+	
+	  });*/
+	
+	/*onclick = function(){
+		alert();
+	}*/
+	/*
+	document.querySelectorAll('.b-primary-nav').addEventListener('click', function(event) {
+			alert();
+			$('.b-primary-nav').removeClass('is-visible');
+			$('.b-primary-nav').css('border', '1px solid #f00');
+			
+	});	
+	*/
+	
+	
+	
+});
+
+
+
+$(function () {                                      
+    $('.b-secondary-nav a').each(function () {             
+        var location = window.location.href; 
+        var link = this.href;                
+        if(location == link) {               
+            $(this).addClass('active');  
+        }
+    });
+});	
+
+$(function () {                                      
+    $('.b-primary-nav a').each(function () {             
+        var location = window.location.href; 
+        var link = this.href;                
+        if(location == link) {               
+            $(this).addClass('active');  
+        }
+    });
+});	
+
+
+	$("body").on("change", "#mark", function() {
+		var name = "";
+		$("#mark option:selected").each(function() {
+			name += $(this).text() + " ";
+		});
+
+		var id = $("#mark option:selected").val();
+		
+		if(id == 0){
+		} else {
+			$("#mark").val(id);
+			console.log(id);
+			getModel();
+		}
+		
+	}).trigger("change");
+	
+	$("body").on("change", "#model", function() {
+		var name = "";
+		$("#model option:selected").each(function() {
+			name += $(this).text() + " ";
+		});
+
+		var id = $("#model option:selected").val();
+		
+		if(id == 0){
+			
+		} else {
+			$("#model").val(id);
+			console.log(id);
+			getYear();
+		}
+		
+	}).trigger("change");
+	
+	$("body").on("change", "#year", function() {
+		var name = "";
+		$("#year option:selected").each(function() {
+			name += $(this).text() + " ";
+		});
+
+		var id = $("#year option:selected").val();
+		
+		if(id == 0){
+			
+		} else {
+			$("#year").val(id);
+			console.log(id);
+		}
+		
+	}).trigger("change");
+
+
+function getMaker() {
+	
+	var options = "<option value=''>Выберите марку</option>";
+
+	$.ajax({
+		url: "/api/robasta/",
+		type: "POST",
+		dataType: "json",
+		data: {"func":"GetMakers"},
+		beforeSend : function (){
+		},
+		success: function(data){
+			for (var item in data) { 
+		        options += "<option value="+data[item]+">"+data[item]+"</option>";
+		    }
+			$("#mark").html(options);
+		},
+		error: function(){
+		}
+	});
+	
+}
+	
+	
+function getModel() {
+
+	var options = "<option value=''>Выберите модель</option>";
+	var mark = $("#mark").val();
+
+	$.ajax({
+		url: "/api/robasta/",
+		type: "POST",
+		dataType: "json",
+		data: {
+			"func":"GetModels",
+			"mark":mark
+		},
+		beforeSend : function (){
+			
+		},
+		success: function(data){
+			for (var item in data) { 
+		        options += "<option value="+data[item]+">"+data[item]+"</option>";
+		    }
+			$("#model").html(options);
+		},
+		error: function(){
+			
+		}
+	});
+
+}
+
+
+function getYear() {
+
+	var options = "<option value=''>Выберите год</option>";
+	var mark = $("#mark").val();
+	var model = $("#model").val();
+
+	$.ajax({
+		url: "/api/robasta/",
+		type: "POST",
+		dataType: "json",
+		data: {
+			"func":"GetYears",
+			"mark":mark,
+			"model":model,
+		},
+		beforeSend : function (){
+			
+		},
+		success: function(data){
+			for (var item in data) { 
+		        options += "<option value="+data[item]+">"+data[item]+"</option>";
+		    }
+			$("#year").html(options);
+		},
+		error: function(){
+			
+		}
+	});
+}
+
+
+getMaker();
+
+function sendFormWidgetCalc()  {
+
+	var f = $('#WidgetCalcForm').serializeObject();
+		
+     $.ajax({
+        type: "POST",
+        url: "/api/calculation/", // Адрес обработчика
+        dataType: "json",
+		data: {
+			"mark":f.mark,
+			"model":f.model,
+			"year":f.year,
+		},
+		beforeSend : function (){
+			$("#WidgetCalcModal").append("<div id='bLoader' class='b-loader-wrapper'><div class='b-loader-container'><div class='b-loader-subcontainer'><div class='b-loader'></div></div></div></div>");
+		},
+		success: function(data){
+			setTimeout(function(){
+				console.log(data);
+				if (data.success == true){
+					$("#WidgetCalcModal #bLoader").remove();	
+					$("#WidgetCalcModal").html("");
+					$("#WidgetCalcModal").html(data.html);
+
+				} else {
+					$("#WidgetCalcModal #bLoader").remove();
+				}
+			}, 1000);
+		},
+		error: function(){
+			$("#WidgetCalcModal #bLoader").remove();
+		}	
+    });    
+};
+
+
+function sendFormCalcCallback()  {
+
+	var f = $('#WidgetCalcForm').serializeObject();
+	var i = $('#formPageInfo').serializeObject();
+		
+     $.ajax({
+        type: "POST",
+        url: "/api/forms/post/buyout/", // Адрес обработчика
+        dataType: "json",
+		data: {
+			"name":f.name,
+			"phone":f.phone,
+			"email":f.email,
+			"mark":f.mark,
+			"model":f.model,
+			"year":f.year,
+			"cash":f.cash,
+			"page_id":i.page_id,
+		},
+		beforeSend : function (){
+			$("#WidgetCalcModal").append("<div id='bLoader' class='b-loader-wrapper'><div class='b-loader-container'><div class='b-loader-subcontainer'><div class='b-loader'></div></div></div></div>");
+		},
+		success: function(data){
+			setTimeout(function(){
+				console.log(data);
+				if (data.success == true){
+						dataLayer.push({
+						"sub": "Заявка на оценку авто",
+						"event":"sendWidgetCalcForm",
+						"eventAction":"sendWidgetCalcForm"
+						});	
+					$("#WidgetCalcModal #bLoader").remove();	
+					$("#WidgetCalcModal").html("");
+					$("#WidgetCalcModal").html("<div><h3>Заявка на детальную оценку</h3><p>" + data.message + "</p></div>");
+
+				} else {
+					$("#WidgetCalcModal #bLoader").remove();
+				}
+			}, 1000);
+		},
+		error: function(){
+			$("#WidgetCalcModal #bLoader").remove();
+		}	
+    });    
+};
+
+
+$.fn.serializeObject = function(){
+    var o = {};
+    var a = this.serializeArray();
+    $.each(a, function() {
+        if (o[this.name] !== undefined) {
+            if (!o[this.name].push) {
+                o[this.name] = [o[this.name]];
+            }
+            o[this.name].push(this.value || '');
+        } else {
+            o[this.name] = this.value || '';
+        }
+    });
+    return o;
+};
+
+$('.b-calc__form.ui.form').form({
+	fields: {
+		mark: {
+			identifier: 'mark',
+			rules: [{
+				type   : 'empty',
+				prompt : ''
+			}]
+		},
+		model: {
+			identifier: 'model',
+			rules: [{
+				type   : 'empty',
+				prompt : ''
+			}]
+		},
+		year: {
+			identifier: 'year',
+			rules: [{
+				type   : 'empty',
+				prompt : ''
+			}]
+		}
+	},
+	onSuccess : function(){
+        console.log('Send Feedback...');
+        sendFormWidgetCalc();
+        return false;
+    }
+
+});
+
+$('#buttonFormCallback').on('click', function(){
+	getFormCallback();
+	$('.ui.modal').modal('show');
+});
+
+function getFormCallback(){
+	
+	var i = $('#formPageInfo').serializeObject();
+	url = "/api/forms/get/callback/";
+	
+	$.ajax({
+		url: url,
+		type: "POST",
+		dataType: "json",
+		data: {},
+		beforeSend : function (){
+			$("#wrapFormCallback").append("<div id='bLoader' class='b-loader-wrapper'><div class='b-loader-container'><div class='b-loader-subcontainer'><div class='b-loader'></div></div></div></div>");
+		},
+		success: function(data){
+			if(data.success == true){
+				$("#wrapFormCallback").html(data.html);
+				$('.ui.checkbox').checkbox();
+			} else {
+				alert("Не удалось получить данные формы обратного звонка");
+			}
+		},
+		error: function(){
+			alert("Не удалось получить данные формы обратного звонка");
+		}
+	});
+}
+
+
+function sendFormCallback() {
+	
+	var f = $('#formCallback').serializeObject();
+	var i = $('#formPageInfo').serializeObject();
+	
+	url = "/api/forms/post/callback/";
+	
+	$.ajax({
+		url: url,
+		type: "POST",
+		dataType: "json",
+		data: {
+			"name":f.name,
+			"phone":f.phone,
+			"page_id":i.page_id,
+		},
+		beforeSend : function (){
+			$("#wrapFormCallback").append("<div id='bLoader' class='b-loader-wrapper'><div class='b-loader-container'><div class='b-loader-subcontainer'><div class='b-loader'></div></div></div></div>");
+		},
+		success: function(data){
+			setTimeout(function(){
+				console.log(data);
+				if (data.success == true){
+					dataLayer.push({
+						"sub": "Заявка на звонок",
+						"event":"sendFormCallback",
+						"eventAction":"sendFormCallback"
+						});	
+					$("#wrapFormCallback #bLoader").remove();	
+					$("#formCallback").html("");
+					$("#formCallback").append("<h2>Запрос на обратный звонок</h2><div>" + data.message + "</div>");
+
+				} else {
+					$("#wrapFormCallback #bLoader").remove();
+				}
+			}, 1000);
+		},
+		error: function(){
+			$("#wrapFormCallback #bLoader").remove();
+		}
+	});
+}
+
+$('.b-testDrive__form.ui.form').form({
+	fields: {
+		phone: {
+			identifier: 'phone',
+			rules: [{
+				type   : 'empty',
+				prompt : ''
+			}]
+		},
+		email: {
+			identifier: 'email',
+			rules: [{
+				type   : 'empty',
+				prompt : ''
+			}]
+		},
+		terms: {
+			identifier: 'terms',
+			rules: [{
+				type   : 'checked',
+				prompt : 'Дайте согласие на обработку ваших персональных данных'
+			}]
+		}
+	},
+	onSuccess : function(){
+        console.log('Send Feedback...');
+        sendFormTestdrive();
+        return false;
+    }
+
+});
+
+function sendFormTestdrive() {
+	
+	var f = $('#formTestdrive').serializeObject();
+	var i = $('#formPageInfo').serializeObject();
+		
+     $.ajax({
+        type: "POST",
+        url:"/api/forms/post/test-drive/",
+        dataType: "json",
+		data: {
+			"name":f.name,
+			"phone":f.phone,
+			"email":f.email,
+			"site": i.pageTitle,
+		},
+		beforeSend : function (){
+			$("#formTestdrivet").append("<div id='bLoader' class='b-loader-wrapper'><div class='b-loader-container'><div class='b-loader-subcontainer'><div class='b-loader'></div></div></div></div>");
+		},
+		success: function(data){
+			setTimeout(function(){
+				console.log(data);
+				if (data.success == true){
+					$("#formTestdrive #bLoader").remove();	
+					$("#formTestdrive").html("");
+					$("#formTestdrive").append("<div class='b-message text-center my-4'>" + data.message + "</div>");
+					
+					dataLayer.push({
+						'event':'sendFormTestdrive',
+						'eventAction':'sendFormTestdrive'
+					});
+
+				} else {
+					$("#formTestdrive #bLoader").remove();
+				}
+			}, 1000);
+		},
+		error: function(){
+			$("#formTestdrive #bLoader").remove();
+		}	
+    });  
+	return false;  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
