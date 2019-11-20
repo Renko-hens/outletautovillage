@@ -10,6 +10,10 @@
     }
 }
 
+.choose-us__container {
+    flex-shrink: 0;
+}
+
 @include breakpoint(xs) {
     .choose-us__title-wrapper {
         text-align: left;
@@ -48,6 +52,7 @@
 
 @include breakpoint (xs) {
     .choose-us__cards-wrapper {
+        flex-shrink: 0;
         flex-direction: column;
     }
 }
@@ -66,11 +71,11 @@
         align-items: center;
         text-align: center;
         flex-direction: column;
+        flex-shrink: 0;
         background-color: var(--color-white);
         padding: 24px;
         margin-right: 0;
         margin-top: 24px;
-        flex-basis: calc(33.33% - 16px);
         -webkit-box-shadow: -2px 2px 57px -46px rgba(0,0,0,0.75);
         -moz-box-shadow: -2px 2px 57px -46px rgba(0,0,0,0.75);
         box-shadow: -2px 2px 57px -46px rgba(0,0,0,0.75);
@@ -81,6 +86,7 @@
     .choose-us__card{
         margin-right: 16px;
         margin-top: 16px;
+        flex-basis: calc(33.33% - 16px);
     }
 }
 

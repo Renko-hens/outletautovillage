@@ -63,13 +63,14 @@
 .property__list-partners {
     margin-top: 8px;
     padding-top: 16px;
+}
 
+.property__list-partners--grid {
     display: grid;
     align-items: center;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 2vw;
-
 }
 
 .property__list-partners + .property__list-partners {

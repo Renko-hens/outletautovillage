@@ -87,6 +87,21 @@
   }
 }
 
+@include breakpoint(md) {
+  .main-header__navigation {
+    position: static;
+
+    display: block;
+    flex-basis: calc(65% - 112px);
+    width: auto;
+    height: auto;
+    padding: 0;
+
+    background: none;
+    border: none;
+  }
+}
+
 .main-header__navigation--show {
   top: 96px;
   right: 0;

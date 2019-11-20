@@ -36,3 +36,97 @@
     margin-top: 8px;
     font-weight: 600;
 }
+
+.banner__description {
+    max-width: 590px;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: left;
+}
+
+@media (min-width: 3400px) {
+    .banner__label {
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+@include breakpoint(xs) {
+    .banner__description {
+        font-size: 16px;
+    }
+}
+
+@media (min-width:3400px) {
+    .banner__description {
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+.banner--service-station {
+    min-height: 340px;
+}
+
+@include breakpoint(sm) {
+    .banner--service-station {
+        background-image: url('/assets/img/service-station-man.png');
+        background-repeat: no-repeat;
+        background-size: 350px;
+        background-position: right -130px bottom;
+    }
+}
+
+@media (min-width:908px) {
+    .banner--service-station {
+        background-position: right bottom;
+    }
+}
+
+@include breakpoint(md) {
+    .banner--service-station {
+        background-size: 40%;
+        background-position: right bottom -20%;
+    }
+}
+
+
+@media (min-width:1168px) {
+    .banner--service-station {
+        background-size: 380px;
+        background-position: right 10% bottom;
+    }
+}
+
+
+@include breakpoint(lg) {
+    .banner--service-station {
+        background-size: 380px;
+        background-position: right 20% bottom;
+    }
+}
+
+@include breakpoint(xl) {
+    .banner--service-station {
+        background-position: right 25% bottom;
+    }
+}
+
+@media (min-width:2070px) {
+    .banner--service-station {
+        background-position: right 30% bottom;
+    }
+}
+
+
+@media (min-width:2560px) {
+    .banner--service-station {
+        background-position: right 35% bottom;
+    }
+}
+
+@media (min-width:3400px) {
+    .banner--service-station {
+        background: none;
+    }
+}

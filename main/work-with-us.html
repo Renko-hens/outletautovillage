@@ -26,7 +26,6 @@
 </head>
 
 <body>
-
     <!-- Header -->
 
     <header class="main-header">
@@ -38,17 +37,13 @@
                 <img class="images" src="/assets/img/logo.svg" alt="Outlet Auto Village">
             </a>
 
-            <nav class="main-header__navigation navigation col-12@xs col-5 col-6@sm">
+            <nav class="main-header__navigation navigation col-12@xs col-5 col-6@sm col-7@sm">
 
                 <ul class="navigation__list flex flex-wrap">
 
                     <li class="navigation__item">
 
-                        <a class="navigation__link link" href="change.html">Обменять</a></li>
-
-                    <li class="navigation__item">
-
-                        <a class="navigation__link navigation__link--active link" href="sale.html">Продать</a></li>
+                        <a class="navigation__link link" href="sale.html">Продать</a></li>
 
                     <li class="navigation__item">
 
@@ -56,11 +51,38 @@
 
                     <li class="navigation__item">
 
-                        <a class="navigation__link link" href="#">Акции</a></li>
+                        <a class="navigation__link link" href="#">Компания</a></li>
 
                     <li class="navigation__item">
 
-                        <a class="navigation__link link" href="#">Компания</a></li>
+                        <a class="navigation__link navigation__link--active link" href="work-with-us.html">Работа у нас</a>
+                        <div class="navigation__sub-wrapper">
+                            <ul class="navigation__sub-list max-width-md">
+                              <li class="navigation__sub-item">
+                                <a class="navigation__sub-link link" href="/work-with-us/carShowroom.html">
+                                  Работа в автосалоне
+                                </a>
+                              </li>
+                            
+                              <li class="navigation__sub-item">
+                                <a class="navigation__sub-link navigation__sub-link--active link " href="/work-with-us/workServiceStation.html">
+                                  Работа на СТО
+                                </a>
+                              </li>
+                            
+                              <li class="navigation__sub-item">
+                                <a class="navigation__sub-link link " href="/work-with-us/workOffice.html">
+                                  Работа в офисе
+                                </a>
+                              </li>
+                            
+                              <li class="navigation__sub-item">
+                                <a class="navigation__sub-link link " href="/work-with-us/development.html">
+                                  Развитие
+                                </a>
+                              </li>
+                            </ul></div>  
+                    </li>
 
                     <li class="navigation__item">
 
@@ -72,7 +94,7 @@
                 </ul>
             </nav>
 
-            <div class="main-header__information text-right col-5 col-7@xs col-4@sm flex justify-center@xs  items-end@sm flex-column@sm">
+            <div class="main-header__information text-right col-5 col-7@xs col-4@sm col-3@md flex justify-center@xs  items-end@sm flex-column@sm">
 
                 <p class="main-header__text">
                     угол 8-го Верхнего и пр. Культуры <br> (напротив пр. Культуры, 50Б)
@@ -99,192 +121,130 @@
 
     <!-- Main -->
     <main class="main">
+      <section class="banner banner--service-station outlet__background-color--secondary flex items-center margin-top-md">
+        <div class="banner__container container max-width-md">
+          <h2 class="banner__label title">
+              Почему Outlet Auto Village?
+          </h2>
+          <p class="banner__description margin-top-md">
+              OAV - это дружная команда профессионалов.
+              Мы ценим результативность, ответственность 
+              и инициативность в работе. Здесь Ваш профессионализм обеспечит Вам высокий доход.
+          </p>
+        </div>
+      </section>  
 
-        <!-- Поиск -->
-        <section class="search">
-
-            <h1 class="visually-hidden">
-                Обменять автомобиль
-            </h1>
-
-            <div class="search__container container max-width-md">
-
-                <div class="search__wrapper">
-
-                    <h2 class="search__title title">
-                        Укажите данные <br> вашего авто
-                    </h2>
-                </div>
-
-                <div class="search__wrapper">
-
-                    <form class="search__form form-search flex">
-
-                        <div class="form-search__wrapper select">
-
-                            <select class="form-search__control form-control width-100%" name="Марка" name="selectThis" id="selectThis">
-                                <optgroup label="Марка">
-                                    <option value="0">Марка</option>
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                </optgroup>
-
-                            </select>
-
-                            <svg class="icon" aria-hidden="true" viewBox="0 0 16 16">
-                                <g
-                                    stroke-width="1"
-                                    stroke="currentColor"
-                                >
-                                    <polyline
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-miterlimit="10"
-                                        points="15.5,4.5 8,12 0.5,4.5 "
-                                    ></polyline>
-                                </g>
-                            </svg>
-                        </div>
-
-                        <div class="form-search__wrapper select">
-
-                            <select class="form-search__control form-control width-100%" name="selectThis" id="selectThis">
-                                <optgroup label="Модель">
-                                    <option value="0">Модель</option>
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                </optgroup>
-
-                            </select>
-
-                            <svg class="icon" aria-hidden="true" viewBox="0 0 16 16">
-                                <g
-                                    stroke-width="1"
-                                    stroke="currentColor"
-                                >
-                                    <polyline
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-miterlimit="10"
-                                        points="15.5,4.5 8,12 0.5,4.5 "
-                                    ></polyline>
-                                </g>
-                            </svg>
-                        </div>
-
-                        <div class="form-search__wrapper select">
-
-                            <select class="form-search__control form-control width-100%" name="selectThis" id="selectThis">
-                                <optgroup label="Год">
-                                    <option value="0">Год</option>
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                </optgroup>
-
-                            </select>
-
-                            <svg class="icon" aria-hidden="true" viewBox="0 0 16 16">
-                                <g
-                                    stroke-width="1"
-                                    stroke="currentColor"
-                                >
-                                    <polyline
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-miterlimit="10"
-                                        points="15.5,4.5 8,12 0.5,4.5 "
-                                    ></polyline>
-                                </g>
-                            </svg>
-                        </div>
-
-                    </form>
-                </div>
-
-                <div class="search__wrapper control-block">
-
-                    <button class="search__button btn btn--search">
-                        Рассчитать
-                    </button>
-                </div>
+      <section class="vacancy">
+        <div class="vacancy__container">
+          <div class="vacancy__item">
+              <h3 class="vacancy__title">
+                Автомеханик-диагност
+              </h3>
+              <p class="vacancy__description">
+                Технический эксперт с большим опытом работы, для которого все тайное становится явным
+              </p>
+              <div class="vacancy__controls">
+                <button class="vacancy__button btn btn--primary">
+                  Заполнить анкету
+                </button>
+              </div>
+          </div>
+          <div class="vacancy__item">
+            <h3 class="vacancy__title">
+              Кладовщик отдела запасных частей
+            </h3>
+            <p class="vacancy__description">
+              Тот самый человек, который знает,
+              где что находится и когда это все закончится
+            </p>
+            <div class="vacancy__controls">
+              <button class="vacancy__button btn btn--primary">
+                Заполнить анкету
+              </button>
             </div>
-            <img class="search__background" src="/assets/img/A.svg" alt="#">
-        </section>
-
-        <!-- Преимущества  -->
-        <section class="features">
-            <div class="features__container container max-width-md">
-                <div class="features__wrapper">
-                    <h2 class="features__title title">
-                        Преимущества продажи в&nbsp;Outlet Auto Village
-                    </h2>
-                </div>
-                <div class="features__wrapper">
-                    <ul class="features__list feature">
-                        <li class="feature__item">
-                            <p class="feature__text">Предложим большой выбор вариатов для обмена</p>
-                        </li>
-                        <li class="feature__item">
-                            <p class="feature__text">Предоставим существенную скидку на выбранный Вами автомобиль</p>
-                        </li>
-                        <li class="feature__item">
-                            <p class="feature__text">Проведем бесплатную диагностику</p>
-                        </li>
-                        <li class="feature__item">
-                            <p class="feature__text">Оценим Ваш автомобиль максимально выгодно</p>
-                        </li>
-                        <li class="feature__item">
-                            <p class="feature__text">Осуществим обмен как с Вашей, так и с нашей доплатой</p>
-                        </li>
-                    </ul>
-                </div>
+          </div>
+          <div class="vacancy__item">
+            <h3 class="vacancy__title">
+              Машинист погрузчика-эвакуатора
+            </h3>
+            <p class="vacancy__description">
+              Ответственный и организованный.
+              Этому человеку можно доверить самое ценное
+            </p>
+            <div class="vacancy__controls">
+              <button class="vacancy__button btn btn--primary">
+                Заполнить анкету
+              </button>
             </div>
-        </section>
+          </div>  
+          <div class="vacancy__item">
+            <h3 class="vacancy__title">
+              Мойщик
+            </h3>
+            <p class="vacancy__description">
+              Из любой машины сделает конфетку
+            </p>
+            <div class="vacancy__controls">
+              <button class="vacancy__button btn btn--primary">
+                Заполнить анкету
+              </button>
+            </div>
+          </div>  
+          <div class="vacancy__item">
+            <h3 class="vacancy__title">
+              Техник склада б/у автомобилей
+            </h3>
+            <p class="vacancy__description">
+              Инициативный и обстоятельный. Тот без, кого работа в автосалоне не возможна.
+            </p>
+            <div class="vacancy__controls">
+              <button class="vacancy__button btn btn--primary">
+                Заполнить анкету
+              </button>
+            </div>
+          </div>  
+        </div>
+      </section>
 
-        <section class="property ready-buy outlet__background-color--light-low">
-
-            <div class="property__container container max-width-md">
-
-                <div class="property__wrapper flex flex-column@xs flex-row@sm items-center justify-end  flex-gap-lg">
-
-                    <div class="property__picture">
-
-                        <img class="property__image" src="/assets/img/buy.svg" alt="sale">
-                    </div>
-
-                    <div class="property__block">
-
-                        <h2 class="property__title vissualy-hidden title">
-                        </h2>
-
-                        <div class="property__description">
-
-                            <p class="property__text ready-buy__text">
-                                Мы готовы купить Ваш автомобиль, даже если Вы не собираетесь ничего приобретать у нас. Денежные средства Вы получаете в течение нескольких часов.
-                            </p>
-
-                            <p class="property__text">
-                                Весь процесс будет курировать Ваш персональный менеджер. Он подскажет порядок действий, проконсультирует, ответит на Ваши вопросы.
-                            </p>
-
-                            <p class="property__text property__text--strong">
-                                С OUTLET AUTO VILLAGE продать автомобиль с пробегом в СПб стало ещё проще!
-                            </p>
-                        </div>
-                    </div>
-                </div>
+      <section class="vacancy-form">
+          <div class="vacancy-form__information">
+            <h2 class="vacancy-form__title title">
+              Карьера в OAV
+            </h2>
+            <p class="vacancy-form__description">
+                Начните историю вашего успеха с нами.
+                Заполните анкету соискателя для участия в кадровом резерве Акселя и отправьте ее, используя данную форму.
+            </p>
+            <div class="vacancy-form__controls">
+              <a href="anketa.doc" class="vacancy-form__link">
+                Анкета кандидата
+              </a>
+            </div>
+          </div>
+          <form class="vacancy-form__block">
+            <label for="questionedName" class="vacancy-form__label">
+              Имя
+              <input id="questionedName" class="vacancy-form__input" name="questionedName" type="text" >
+            </label>
+            <label class="vacancy-form__label" for="questionedPhone">
+              Номер телефона
+              <input  id="questionedPhone" class="vacancy-form__input" name="questionedPhone" type="text">
+            </label>
+            <label for="questionedEmail" class="vacancy-form__label">
+              Адрес эл.почты
+              <input id="questionedEmail" class="vacancy-form__input" name="questionedEmail" type="email" >
+            </label>
+            <label for="questionedFile" class="vacancy-form__label">
+                Заполненная анкета
+                <input  id="questionedFile" class="vacancy-form__input" name="questionedFile" type="file" size="40" accept=".doc,.docx,.pdf,.xls,.xlsx">
+            </label>
+          </form>
         </section>
     </main>
 
     <footer class="main-footer">
 
-        <div class="main-footer__container container max-width-lg">
+        <div class="main-footer__container container max-width-md">
 
             <!-- Блоки -->
 
