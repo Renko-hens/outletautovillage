@@ -1,0 +1,450 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900&display=swap" rel="stylesheet">
+    <script>
+        document.getElementsByTagName("html")[0].className += " js";
+    </script>
+    <script>
+        if ('CSS' in window && CSS.supports('color', 'var(--color-var)')) {
+            document.write('<link rel="stylesheet" href="assets/css/style.css">');
+        } else {
+            document.write('<link rel="stylesheet" href="assets/css/style-fallback.css">');
+        }
+    </script>
+    <noscript>
+        <link
+            rel="stylesheet"
+            href="assets/css/style-fallback.css"
+        >
+    </noscript>
+    <title>OutletAutoVillage</title>
+</head>
+
+<body>
+    <!-- Header -->
+
+    <header class="main-header">
+
+        <div class="main-header__container max-width-md grid justify-between items-center">
+
+            <a href="/" class="main-header__wrapper-pictures col-2 col-3@xs col-2@sm">
+
+                <img class="images" src="/assets/img/logo.svg" alt="Outlet Auto Village">
+            </a>
+
+            <nav class="main-header__navigation navigation col-12@xs col-5 col-6@sm col-7@sm">
+
+                <ul class="navigation__list flex flex-wrap">
+
+                    <li class="navigation__item">
+
+                        <a class="navigation__link link" href="sale.html">Продать</a></li>
+
+                    <li class="navigation__item">
+
+                        <a class="navigation__link link" href="buy.html">Купить</a></li>
+
+                    <li class="navigation__item">
+
+                        <a class="navigation__link link" href="#">Компания</a></li>
+
+                    <li class="navigation__item">
+
+                        <a class="navigation__link navigation__link--active link" href="work-with-us.html">Работа у нас</a>
+                        <div class="navigation__sub-wrapper">
+                            <ul class="navigation__sub-list max-width-md">
+                              <li class="navigation__sub-item">
+                                <a class="navigation__sub-link link" href="/work-with-us/carShowroom.html">
+                                  Работа в автосалоне
+                                </a>
+                              </li>
+                            
+                              <li class="navigation__sub-item">
+                                <a class="navigation__sub-link navigation__sub-link--active link " href="/work-with-us/workServiceStation.html">
+                                  Работа на СТО
+                                </a>
+                              </li>
+                            
+                              <li class="navigation__sub-item">
+                                <a class="navigation__sub-link link " href="/work-with-us/workOffice.html">
+                                  Работа в офисе
+                                </a>
+                              </li>
+                            
+                              <li class="navigation__sub-item">
+                                <a class="navigation__sub-link link " href="/work-with-us/development.html">
+                                  Развитие
+                                </a>
+                              </li>
+                            </ul></div>  
+                    </li>
+
+                    <li class="navigation__item">
+
+                        <a class="navigation__link link" href="#">Отзывы</a></li>
+
+                    <li class="navigation__item">
+
+                        <a class="navigation__link link" href="#">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <div class="main-header__information text-right col-5 col-7@xs col-4@sm col-3@md flex justify-center@xs  items-end@sm flex-column@sm">
+
+                <p class="main-header__text">
+                    угол 8-го Верхнего и пр. Культуры <br> (напротив пр. Культуры, 50Б)
+                </p>
+
+                <a class="main-header__link link" href="tel:+78124459713">
+                    +7 812 445-97-13
+                </a>
+            </div>
+
+            <div class="main-header__menu-block col-5 col-2@xs flex justify-end@xs">
+
+                <button class="main-header__button reset anim-menu-btn js-anim-menu-btn" aria-label="Toggle menu">
+
+                    <i
+                        class="anim-menu-btn__icon anim-menu-btn__icon--close"
+                        aria-hidden="true"
+                    ></i>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main class="main">
+      <section class="banner banner--service-station outlet__background-color--secondary flex items-center margin-top-md">
+        <div class="banner__container container max-width-md">
+          <h2 class="banner__label title">
+              Почему Outlet Auto Village?
+          </h2>
+          <p class="banner__description margin-top-md">
+              OAV - это дружная команда профессионалов.
+              Мы ценим результативность, ответственность 
+              и инициативность в работе. Здесь Ваш профессионализм обеспечит Вам высокий доход.
+          </p>
+        </div>
+      </section>  
+
+      <section class="vacancy">
+        <div class="vacancy__container">
+          <div class="vacancy__item">
+              <h3 class="vacancy__title">
+                Автомеханик-диагност
+              </h3>
+              <p class="vacancy__description">
+                Технический эксперт с большим опытом работы, для которого все тайное становится явным
+              </p>
+              <div class="vacancy__controls">
+                <button class="vacancy__button btn btn--primary">
+                  Заполнить анкету
+                </button>
+              </div>
+          </div>
+          <div class="vacancy__item">
+            <h3 class="vacancy__title">
+              Кладовщик отдела запасных частей
+            </h3>
+            <p class="vacancy__description">
+              Тот самый человек, который знает,
+              где что находится и когда это все закончится
+            </p>
+            <div class="vacancy__controls">
+              <button class="vacancy__button btn btn--primary">
+                Заполнить анкету
+              </button>
+            </div>
+          </div>
+          <div class="vacancy__item">
+            <h3 class="vacancy__title">
+              Машинист погрузчика-эвакуатора
+            </h3>
+            <p class="vacancy__description">
+              Ответственный и организованный.
+              Этому человеку можно доверить самое ценное
+            </p>
+            <div class="vacancy__controls">
+              <button class="vacancy__button btn btn--primary">
+                Заполнить анкету
+              </button>
+            </div>
+          </div>  
+          <div class="vacancy__item">
+            <h3 class="vacancy__title">
+              Мойщик
+            </h3>
+            <p class="vacancy__description">
+              Из любой машины сделает конфетку
+            </p>
+            <div class="vacancy__controls">
+              <button class="vacancy__button btn btn--primary">
+                Заполнить анкету
+              </button>
+            </div>
+          </div>  
+          <div class="vacancy__item">
+            <h3 class="vacancy__title">
+              Техник склада б/у автомобилей
+            </h3>
+            <p class="vacancy__description">
+              Инициативный и обстоятельный. Тот без, кого работа в автосалоне не возможна.
+            </p>
+            <div class="vacancy__controls">
+              <button class="vacancy__button btn btn--primary">
+                Заполнить анкету
+              </button>
+            </div>
+          </div>  
+        </div>
+      </section>
+
+      <section class="vacancy-form">
+          <div class="vacancy-form__information">
+            <h2 class="vacancy-form__title title">
+              Карьера в OAV
+            </h2>
+            <p class="vacancy-form__description">
+                Начните историю вашего успеха с нами.
+                Заполните анкету соискателя для участия в кадровом резерве Акселя и отправьте ее, используя данную форму.
+            </p>
+            <div class="vacancy-form__controls">
+              <a href="anketa.doc" class="vacancy-form__link">
+                Анкета кандидата
+              </a>
+            </div>
+          </div>
+          <form class="vacancy-form__block">
+            <label for="questionedName" class="vacancy-form__label">
+              Имя
+              <input id="questionedName" class="vacancy-form__input" name="questionedName" type="text" >
+            </label>
+            <label class="vacancy-form__label" for="questionedPhone">
+              Номер телефона
+              <input  id="questionedPhone" class="vacancy-form__input" name="questionedPhone" type="text">
+            </label>
+            <label for="questionedEmail" class="vacancy-form__label">
+              Адрес эл.почты
+              <input id="questionedEmail" class="vacancy-form__input" name="questionedEmail" type="email" >
+            </label>
+            <label for="questionedFile" class="vacancy-form__label">
+                Заполненная анкета
+                <input  id="questionedFile" class="vacancy-form__input" name="questionedFile" type="file" size="40" accept=".doc,.docx,.pdf,.xls,.xlsx">
+            </label>
+          </form>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+
+        <div class="main-footer__container container max-width-md">
+
+            <!-- Блоки -->
+
+            <div class="main-footer__blocks flex justify-between flex-gap-md flex-column@xs flex-row@sm">
+
+                <!-- Информация -->
+
+                <div class="main-footer__information">
+
+                    <div class="main-footer__wrapper-pictures">
+
+                        <img class="image" src="/assets/img/logo.svg" alt="Outlet Auto Village">
+                    </div>
+
+                    <div class="main-footer__wrapper-information">
+
+                        <a class="main-footer__phone link" href="tel:+78124459713">
+                            +7 812 445-97-13
+                        </a>
+
+                        <a class="main-footer__email link" href="mailto:info@outletautovillage.ru">
+                            info@outletautovillage.ru
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Услуги -->
+
+                <div class="services">
+
+                    <h3 class="services__title main-footer__title">
+                        Услуги
+                    </h3>
+
+                    <ul class="services__list">
+
+                        <li class="services__item">
+
+                            <a href="#" class="services__link main-footer__link">
+                                Продажа автомобилей с пробегом
+                            </a>
+                        </li>
+
+                        <li class="services__item">
+
+                            <a href="#" class="services__link main-footer__link">
+                                Выкуп автомобилей с пробегом
+                            </a>
+                        </li>
+
+                        <li class="services__item">
+
+                            <a href="#" class="services__link main-footer__link">
+                                Выкуп коммерческих авто
+                            </a>
+                        </li>
+
+                        <li class="services__item">
+
+                            <a href="#" class="services__link main-footer__link">
+                                Трейд-ин
+                            </a>
+                        </li>
+
+                        <li class="services__item">
+
+                            <a href="#" class="services__link main-footer__link">
+                                Автострахование
+                            </a>
+                        </li>
+
+                        <li class="services__item">
+
+                            <a href="#" class="services__link main-footer__link">
+                                Автокредитование
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Компания -->
+
+                <div class="company">
+
+                    <h3 class="company__title main-footer__title">
+                        Компания
+                    </h3>
+
+                    <ul class="company__list">
+
+                        <li class="company__item">
+
+                            <a href="#" class="company__link main-footer__link">
+                                О нас
+                            </a>
+                        </li>
+
+                        <li class="company__item">
+
+                            <a href="#" class="company__link main-footer__link">
+                                Почему выбирают нас
+                            </a>
+                        </li>
+
+                        <li class="company__item">
+
+                            <a href="#" class="company__link main-footer__link">
+                                Акции
+                            </a>
+                        </li>
+
+                        <li class="company__item">
+
+                            <a href="#" class="company__link main-footer__link">
+                                Документы
+                            </a>
+                        </li>
+
+                        <li class="company__item">
+
+                            <a href="#" class="company__link main-footer__link">
+                                Отзывы
+                            </a>
+                        </li>
+
+                        <li class="company__item">
+
+                            <a href="#" class="company__link main-footer__link">
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="main-footer__blocks flex flex-column">
+
+                <div class="main-footer__socials">
+
+                    <ul class="socials__list flex flex-gap-sm justify-center ">
+
+                        <li class="socials__item">
+
+                            <a href="instagram.ru" class="socials__link">
+                                Инстаграм
+
+                                <img
+                                    class="socials__image"
+                                    src="/assets/img/instagram.svg"
+                                    alt="instagram"
+                                >
+                            </a>
+                        </li>
+
+                        <li class="socials__item">
+
+                            <a href="vkontakte.com" class="socials__link">
+                                Вконтакте
+
+                                <img
+                                    class="socials__image"
+                                    src="/assets/img/vk.svg"
+                                    alt="vkontakte"
+                                >
+                            </a>
+                        </li>
+
+                        <li class="socials__item">
+
+                            <a href="facebook.com" class="socials__link">
+                                Фейсбук
+
+                                <img
+                                    class="socials__image"
+                                    src="/assets/img/facebook.svg"
+                                    alt="facebook"
+                                >
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="main-footer__copyright copyright flex flex-wrap justify-center">
+
+                    <p class="copyright__text">
+                        © 2018 ООО «Аутлет Ауто Вилладж»
+                    </p>
+
+                    <a class="copyright__link main-footer__link" href="#">
+                        Пользовательское соглашение
+                    </a>
+
+                    <a class="copyright__link main-footer__link" href="#">
+                        &nbsp;Политика конфиденциальности
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>

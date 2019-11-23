@@ -40,10 +40,30 @@
   font-size: var(--text-sm);
 }
 
+// .form-search__control {
+//     border: none;
+// }
 
-.form-search__control {
-    border: none;
+.form-search__control:focus {
+  border-color: var(--color-contrast-medium);
 }
+
+.form-search__wrapper--error .form-control {
+  border-color: var(--color-error);
+}
+
+.form-search__wrapper--error label.error {
+  color: red;
+}
+
+.form-search__select-block {
+  position: relative;
+}
+
+// .form-search__wrapper--error .form-search__select-block{
+//   margin-bottom: var(--space-xxs);
+// }
+
 
 
 // --------------------------------

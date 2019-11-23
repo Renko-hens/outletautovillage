@@ -20,10 +20,13 @@
 }
 
 .feature {
+    flex-basis: 100%;
+}
+
+.promise {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    flex-basis: 100%;
 }
 
 .feature__item {
@@ -31,6 +34,10 @@
     align-items: center;
     flex-basis: 380px;
     margin-top: 24px;
+}
+
+.feature__item:first-child {
+    margin-top: 0;
 }
 
 .feature__item::before {

@@ -16,7 +16,7 @@
 
 @include breakpoint (xs) { 
     .team__wrapper {
-        flex-direction: column;
+        flex-wrap: wrap;
         align-items: center;
     }
 }
@@ -24,19 +24,20 @@
 @include breakpoint (sm) { 
     .team__wrapper {
         flex-direction: row;
+        flex-wrap: nowrap;
         align-items: flex-start;
     }
 }
 
 .team__item-label {
     display: flex;
-    justify-content: flex-start;
     align-items: flex-start;
 }
 
 @include breakpoint (xs) { 
     .team__item-label{
         flex-basis: 100%;
+        justify-content: center;
     }
 }
 
@@ -60,7 +61,7 @@
         content: "";
         background-image: url("/img/icon52.png");
         width: 30%;
-        height: 90%;
+        height: 30%;
         background-repeat: no-repeat;
         background-position: top 40px center;
     }
@@ -79,7 +80,7 @@
 
 @include breakpoint (sm) { 
     .team__label-title {
-        margin-top: 140px;
+        margin-top: 132px;
     }
 }
 

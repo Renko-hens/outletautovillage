@@ -1,0 +1,509 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900&display=swap"
+        rel="stylesheet"
+    >
+    <script>
+        document.getElementsByTagName("html")[0].className += " js";
+    </script>
+    <script>
+        if ('CSS' in window && CSS.supports('color', 'var(--color-var)')) {
+            document.write('<link rel="stylesheet" href="assets/css/style.css">');
+        } else {
+            document.write('<link rel="stylesheet" href="assets/css/style-fallback.css">');
+        }
+    </script>
+    <noscript>
+        <link
+            rel="stylesheet"
+            href="assets/css/style-fallback.css"
+        >
+    </noscript>
+    <title>OutletAutoVillage</title>
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header class="main-header">
+
+        <div class="main-header__container max-width-md grid justify-between items-center">
+
+            <a
+                href="/"
+                class="main-header__wrapper-pictures col-2 col-3@xs col-2@sm"
+            >
+
+                <img
+                    class="images"
+                    src="/assets/img/logo.svg"
+                    alt="Outlet Auto Village"
+                >
+            </a>
+
+            <nav class="main-header__navigation navigation col-12@xs col-5 col-6@sm">
+
+                <ul class="navigation__list flex flex-wrap">
+
+                    <li class="navigation__item">
+
+                        <a
+                            class="navigation__link link"
+                            href="change.html"
+                        >Обменять</a></li>
+
+                    <li class="navigation__item">
+
+                        <a
+                            class="navigation__link link"
+                            href="sale.html"
+                        >Продать</a></li>
+
+                    <li class="navigation__item">
+
+                        <a
+                            class="navigation__link link"
+                            href="#"
+                        >Купить</a></li>
+
+                    <li class="navigation__item">
+
+                        <a
+                            class="navigation__link link"
+                            href="#"
+                        >Акции</a></li>
+
+                    <li class="navigation__item">
+
+                        <a
+                            class="navigation__link link"
+                            href="#"
+                        >Компания</a>
+
+                        <div class="navigation__sub-wrapper">
+                            <ul class="navigation__sub-list max-width-xs">
+
+                                <li class="navigation__sub-item">
+    
+                                    <a
+                                        href="#"
+                                        class="navigation__sub-link link"
+                                    >
+                                        О нас
+                                    </a>
+                                </li>
+    
+                                <li class="navigation__sub-item">
+    
+                                    <a
+                                        href="#"
+                                        class="navigation__sub-link link"
+                                    >
+                                        О Вас
+                                    </a>
+                                </li>
+    
+                                <li class="navigation__sub-item">
+    
+                                    <a
+                                        href="#"
+                                        class="navigation__sub-link link"
+                                    >
+                                        О них
+                                    </a>
+                                </li>
+
+                                <li class="navigation__sub-item">
+    
+                                    <a
+                                        href="#"
+                                        class="navigation__sub-link link"
+                                    >
+                                        Философия
+                                    </a>
+                                </li>
+
+                                <li class="navigation__sub-item">
+    
+                                    <a
+                                        href="#"
+                                        class="navigation__sub-link link"
+                                    >
+                                        Дружба народов
+                                    </a>
+                                </li>
+                                <li class="navigation__sub-item">
+    
+                                    <a
+                                        href="#"
+                                        class="navigation__sub-link link"
+                                    >
+                                        Дружба народов
+                                    </a>
+                                </li>
+                                <li class="navigation__sub-item">
+    
+                                    <a
+                                        href="#"
+                                        class="navigation__sub-link link"
+                                    >
+                                        Дружба народов
+                                    </a>
+                                </li>
+                                <li class="navigation__sub-item">
+    
+                                    <a
+                                        href="#"
+                                        class="navigation__sub-link link"
+                                    >
+                                        Дружба народов
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="navigation__item">
+
+                        <a
+                            class="navigation__link link"
+                            href="#"
+                        >Отзывы</a></li>
+
+                    <li class="navigation__item">
+
+                        <a
+                            class="navigation__link link"
+                            href="#"
+                        >Контакты</a></li>
+                </ul>
+            </nav>
+
+            <div
+                class="main-header__information text-right col-5 col-7@xs col-4@sm flex justify-center@xs  items-end@sm flex-column@sm">
+
+                <p class="main-header__text">
+                    угол 8-го Верхнего и&nbsp;пр. Культуры <br> (напротив пр. Культуры, 50Б)
+                </p>
+
+                <a
+                    class="main-header__link link"
+                    href="tel:+78124459713"
+                >
+                    +7 812 445-97-13
+                </a>
+            </div>
+
+            <div class="main-header__menu-block col-5 col-2@xs flex justify-end@xs">
+
+                <button
+                    class="main-header__button reset anim-menu-btn js-anim-menu-btn"
+                    aria-label="Toggle menu"
+                >
+
+                    <i
+                        class="anim-menu-btn__icon anim-menu-btn__icon--close"
+                        aria-hidden="true"
+                    ></i>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="main" style="background-color: blue; padding: 100px 0;">
+        <div class='payment container max-width-md grid margin-top-lg outlet__background-color--light-low items-center'>
+            <div class='payment__block-info flex flex-column items-center'>
+                <div class='payment__wrapper'>
+                    <h2 class='payment__title text-center title'>
+                        Заявка на детальную оценку
+                    </h2>
+                    <p class="margin-top-sm">
+                        Запрос на выкуп автомобиля успешно отправлен. <br>
+                        Через некоторое время Вам перезвонит наш оператор.
+                    </p>
+                </div>
+                <div class='payment__wrapper margin-top-sm'>
+                    <svg height="64" viewBox="0 0 60 60" width="512" xmlns="http://www.w3.org/2000/svg"><g id="Page-1" fill="none" fill-rule="evenodd"><g id="019---Tick" fill-rule="nonzero"><path id="Shape" d="m59 5v50c.0002919 1.0609554-.4210417 2.0785407-1.1712505 2.8287495s-1.7677941 1.1715424-2.8287495 1.1712505l-8 .0000002 1-58.0000002h7c1.0609554-.00029188 2.0785407.42104175 2.8287495 1.17125054.7502088.7502088 1.1715424 1.76779405 1.1712505 2.82874946z" fill="#7facfa"/><path id="Shape" d="m56 5v50c.0002919 1.0609554-.4210417 2.0785407-1.1712505 2.8287495s-1.7677941 1.1715424-2.8287495 1.1712505l-5 .0000002 1-58.0000002h4c1.0609554-.00029188 2.0785407.42104175 2.8287495 1.17125054.7502088.7502088 1.1715424 1.76779405 1.1712505 2.82874946z" fill="#a4c2f7"/><rect id="Rectangle-path" fill="#e8edfc" height="58" rx="4" width="52" x="1" y="1"/><path id="Shape" d="m53 29.7v25.3c.0002919 1.0609554-.4210417 2.0785407-1.1712505 2.8287495s-1.7677941 1.1715424-2.8287495 1.1712505h-44c-1.06095541.0002919-2.07854066-.4210417-2.82874946-1.1712505-.75020879-.7502088-1.17154242-1.7677941-1.17125054-2.8287495v-15.17c2.75764321-1.8381578 5.63393009-3.4917722 8.61-4.95 1.68-.82 3.44-1.5866667 5.28-2.3 1.96-.77 4.0066667-1.4566667 6.14-2.06 1.75-.5 3.5566667-.9266667 5.42-1.28.52-.1 1.05-.19 1.58-.28 2.0035129-.3377721 4.0227215-.5747371 6.05-.71 1.29-.09 2.6-.14 3.93-.14 5.0406804-.0378266 10.0694183.4955752 14.99 1.59z" fill="#cad9fc"/><path id="Shape" d="m14.89 32.58c-1.84.71-3.6 1.4766667-5.28 2.3l2.73-3.13c.3709613-.4206721 1.0094464-.4694453 1.44-.11z" fill="#fff"/><path id="Shape" d="m45.78 18.48-7.77 9.63c-1.33 0-2.64.05-3.93.14-2.0272785.1352629-4.0464871.3722279-6.05.71-.53.09-1.06.18-1.58.28l12.8-15.86c.3531452-.4346135.9895338-.5058178 1.43-.16l4.93 3.83c.2140848.1657538.3526554.4105224.3846177.6793811.0319622.2688588-.0453606.539293-.2146177.7506189z" fill="#fff"/><path id="Shape" d="m38.01 28.11-13.99 17.34c-.7125486.87452-1.7467612 1.4258598-2.87 1.53-.4485716.0442256-.9013714.0138137-1.34-.09-.7253491-.1841416-1.3969264-.5370623-1.96-1.03l-9.49-7.99c-.20639067-.1736571-.33431352-.4229882-.35500082-.691923-.02068729-.2689348.06759759-.5348973.24500082-.738077l1.36-1.56c1.68-.82 3.44-1.5866667 5.28-2.3l4.48 3.77c.2108395.1782327.4846682.2638671.7594877.2375146.2748195-.0263526.5273849-.1624632.7005123-.3775146l5.62-6.97c.52-.1 1.05-.19 1.58-.28 2.0035129-.3377721 4.0227215-.5747371 6.05-.71 1.29-.09 2.6-.14 3.93-.14z" fill="#e8edfc"/><path id="Shape" d="m2.7632 58.3171c.43252216.2925391.91844139.4969989 1.43.6017.26551634.0541429.53581964.0813474.8068.0812l3 .0000006c-.27084669.0001199-.54101463-.0270845-.8064-.0812006-1.85967906-.3827703-3.1940406-2.0201375-3.1936-3.9188v-50c-.00029188-1.06095541.42104175-2.07854066 1.17125054-2.82874946.7502088-.75020879 1.76779405-1.17154242 2.82874946-1.17125069l-3 .00000015c-1.06095541-.00029188-2.07854066.42104175-2.82874946 1.17125054-.75020879.7502088-1.17154242 1.76779405-1.17125054 2.82874946v50c-.00115465 1.3302875.6598823 2.5738933 1.7632 3.3171z" fill="#fff"/><path id="Shape" d="m2 5v13 37h-2v-37-13z" fill="#fff"/><g fill="#428dff"><path id="Shape" d="m1 10c.55162365-.00159279.99840721-.44837635 1-1v-4h-2v4c.0016474.55160093.44839907.9983526 1 1z"/><path id="Shape" d="m0 55h2v-38c0-.5522847-.44771525-1-1-1s-1 .4477153-1 1z"/><path id="Shape" d="m2 13c-.0039589-.2647108-.10750224-.5182135-.29-.71l-.15-.12c-.05575598-.037828-.11628399-.068092-.18-.09-.05666008-.0288933-.11733597-.0491186-.18-.06-.06612874-.0112482-.13295338-.0179306-.2-.02-.26476698.0036835-.51836621.1072663-.71.29-.37745227.398085-.37745227 1.021915 0 1.42.09566008.0903288.20765785.1616001.33.21.12022231.051241.24932274.07842.38.08.26469083-.0040569.51815919-.1075862.71-.29.18241381-.1918408.28594314-.4453092.29-.71z"/><path id="Shape" d="m49 60h-44c-2.76007596-.0032511-4.99674886-2.239924-5-5 0-.5522847.44771525-1 1-1s1 .4477153 1 1c.00181871 1.6561003 1.34389967 2.9981813 3 3h44c1.6561003-.0018187 2.9981813-1.3438997 3-3v-50c-.0018187-1.65610033-1.3438997-2.99818129-3-3h-44c-1.65610033.00181871-2.99818129 1.34389967-3 3 0 .55228475-.44771525 1-1 1s-1-.44771525-1-1c.00325114-2.76007596 2.23992404-4.99674886 5-5h44c2.760076.00325114 4.9967489 2.23992404 5 5v50c-.0032511 2.760076-2.239924 4.9967489-5 5z"/><path id="Shape" d="m55 60h-8c-.5522847 0-1-.4477153-1-1s.4477153-1 1-1h8c1.6561003-.0018187 2.9981813-1.3438997 3-3v-50c-.0018187-1.65610033-1.3438997-2.99818129-3-3h-7c-.5522847 0-1-.44771525-1-1s.4477153-1 1-1h7c2.760076.00325114 4.9967489 2.23992404 5 5v50c-.0032511 2.760076-2.239924 4.9967489-5 5z"/><path id="Shape" d="m20.7529 48c-.3949925-.0000467-.7886159-.0464303-1.1728-.1382-.8779215-.2215754-1.6912489-.6469792-2.374-1.2417l-9.4893-7.9834c-.412913-.3460551-.6691166-.8437771-.7108267-1.3809099-.0417101-.5371327.13458607-1.0684397.4891267-1.4740901l4.0928-4.6855c.7285773-.8282014 1.9845612-.9246074 2.831-.2173l5.5967 4.709 18.4544-22.8355c.6970355-.8545183 1.9474735-.9992718 2.8213-.3266l4.9317 3.8325c.4257958.3301644.7008887.8177245.7633369 1.3528981s-.0929979 1.0729723-.4313369 1.4923019l-21.7542 26.9717c-.8816636 1.0837108-2.1610701 1.7686208-3.5518 1.9014-.1679333.0156-.3333.0234-.4961.0234zm-.7119-2.0845c.3336826.0802779.6784789.1039404 1.02.07.8543211-.0807819 1.6405484-.5008404 2.1826-1.1661l21.7544-26.9722-4.9335-3.8418-18.4532 22.8359c-.3426558.4237441-.8413905.6918053-1.383856.7437983-.5424654.051993-1.0830377-.116455-1.499944-.4673983l-5.5957-4.7077-4.13 4.687 9.4914 7.993c.4442156.3925551.9743644.6753719 1.5478.8257z"/></g></g></g></svg>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+
+        <div class="main-footer__container container max-width-lg">
+
+            <!-- Блоки -->
+
+            <div class="main-footer__blocks flex justify-between flex-gap-md flex-column@xs flex-row@sm">
+
+                <!-- Информация -->
+
+                <div class="main-footer__information">
+
+                    <div class="main-footer__wrapper-pictures">
+
+                        <img
+                            class="image"
+                            src="/assets/img/logo.svg"
+                            alt="Outlet Auto Village"
+                        >
+                    </div>
+
+                    <div class="main-footer__wrapper-information">
+
+                        <a
+                            class="main-footer__phone link"
+                            href="tel:+78124459713"
+                        >
+                            +7 812 445-97-13
+                        </a>
+
+                        <a
+                            class="main-footer__email link"
+                            href="mailto:info@outletautovillage.ru"
+                        >
+                            info@outletautovillage.ru
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Услуги -->
+
+                <div class="services">
+
+                    <h3 class="services__title main-footer__title">
+                        Услуги
+                    </h3>
+
+                    <ul class="services__list">
+
+                        <li class="services__item">
+
+                            <a
+                                href="#"
+                                class="services__link main-footer__link"
+                            >
+                                Продажа автомобилей с&nbsp;пробегом
+                            </a>
+                        </li>
+
+                        <li class="services__item">
+
+                            <a
+                                href="#"
+                                class="services__link main-footer__link"
+                            >
+                                Выкуп автомобилей с&nbsp;пробегом
+                            </a>
+                        </li>
+
+                        <li class="services__item">
+
+                            <a
+                                href="#"
+                                class="services__link main-footer__link"
+                            >
+                                Выкуп коммерческих авто
+                            </a>
+                        </li>
+
+                        <li class="services__item">
+
+                            <a
+                                href="#"
+                                class="services__link main-footer__link"
+                            >
+                                Трейд-ин
+                            </a>
+                        </li>
+
+                        <li class="services__item">
+
+                            <a
+                                href="#"
+                                class="services__link main-footer__link"
+                            >
+                                Автострахование
+                            </a>
+                        </li>
+
+                        <li class="services__item">
+
+                            <a
+                                href="#"
+                                class="services__link main-footer__link"
+                            >
+                                Автокредитование
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Компания -->
+
+                <div class="company">
+
+                    <h3 class="company__title main-footer__title">
+                        Компания
+                    </h3>
+
+                    <ul class="company__list">
+
+                        <li class="company__item">
+
+                            <a
+                                href="#"
+                                class="company__link main-footer__link"
+                            >
+                                О нас
+                            </a>
+                        </li>
+
+                        <li class="company__item">
+
+                            <a
+                                href="#"
+                                class="company__link main-footer__link"
+                            >
+                                Почему выбирают нас
+                            </a>
+                        </li>
+
+                        <li class="company__item">
+
+                            <a
+                                href="#"
+                                class="company__link main-footer__link"
+                            >
+                                Акции
+                            </a>
+                        </li>
+
+                        <li class="company__item">
+
+                            <a
+                                href="#"
+                                class="company__link main-footer__link"
+                            >
+                                Документы
+                            </a>
+                        </li>
+
+                        <li class="company__item">
+
+                            <a
+                                href="#"
+                                class="company__link main-footer__link"
+                            >
+                                Отзывы
+                            </a>
+                        </li>
+
+                        <li class="company__item">
+
+                            <a
+                                href="#"
+                                class="company__link main-footer__link"
+                            >
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="main-footer__blocks flex flex-column">
+
+                <div class="main-footer__socials">
+
+                    <ul class="socials__list flex flex-gap-sm justify-center ">
+
+                        <li class="socials__item">
+
+                            <a
+                                href="instagram.ru"
+                                class="socials__link"
+                            >
+                                Инстаграм
+
+                                <img
+                                    class="socials__image"
+                                    src="/assets/img/instagram.svg"
+                                    alt="instagram"
+                                >
+                            </a>
+                        </li>
+
+                        <li class="socials__item">
+
+                            <a
+                                href="vkontakte.com"
+                                class="socials__link"
+                            >
+                                Вконтакте
+
+                                <img
+                                    class="socials__image"
+                                    src="/assets/img/vk.svg"
+                                    alt="vkontakte"
+                                >
+                            </a>
+                        </li>
+
+                        <li class="socials__item">
+
+                            <a
+                                href="facebook.com"
+                                class="socials__link"
+                            >
+                                Фейсбук
+
+                                <img
+                                    class="socials__image"
+                                    src="/assets/img/facebook.svg"
+                                    alt="facebook"
+                                >
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="main-footer__copyright copyright flex flex-wrap justify-center">
+
+                    <p class="copyright__text">
+                        © 2018 ООО «Аутлет Ауто Вилладж»
+                    </p>
+
+                    <a
+                        class="copyright__link main-footer__link"
+                        href="#"
+                    >
+                        Пользовательское соглашение
+                    </a>
+
+                    <a
+                        class="copyright__link main-footer__link"
+                        href="#"
+                    >
+                        &nbsp;Политика конфиденциальности
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>

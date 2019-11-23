@@ -1,3 +1,8 @@
 .address {
     margin-top: 96px;
 }
+
+.address__link:hover,
+.address__link:focus {
+    color: var(--color-main);
+}
