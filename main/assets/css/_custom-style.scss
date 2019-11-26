@@ -5,6 +5,7 @@
 @import 'custom-style/icons';
 @import 'custom-style/buttons';
 @import 'custom-style/forms';
+
 // Styles pages in folder page
 @import 'custom-style/pages/main/blocks/hero-image/hero-image.scss';
 @import 'custom-style/pages/main/blocks/advantages/advantages.scss';
@@ -17,12 +18,16 @@
 @import 'custom-style/pages/change/trade/trade.scss';
 @import 'custom-style/pages/change/steps/steps.scss';
 @import 'custom-style/pages/change/payment/payment.scss';
+
 // page "buy"
 @import 'custom-style/pages/buy/request-test/request-test.scss';
+
 // page "sale"
 @import 'custom-style/pages/sale/ready-buy/ready-buy.scss';
+
 // page "contacts"  
 @import 'custom-style/pages/contacts/contacts.scss';
+
 // page "about-us"
 @import 'custom-style/pages/about-us/choice/choice.scss';
 @import 'custom-style/pages/about-us/choose-us/choose-us.scss';
@@ -33,6 +38,9 @@
 
 // page "services"
 @import 'custom-style/pages/service/service.scss';
+
+// page "work-with-us"
+@import 'custom-style/pages/work-with-us/vacancy/vacancy.scss';
 
 // Parts folder reusable
 @import 'custom-style/pages/parts/header/header.scss';

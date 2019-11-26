@@ -135,111 +135,159 @@
       </section>  
 
       <section class="vacancy">
-        <div class="vacancy__container">
-          <div class="vacancy__item">
-              <h3 class="vacancy__title">
+        <ul class="vacancy__list">
+          <li class="vacancy__item">
+            <div class="vacancy__wrapper">
+              <h3 class="vacancy__title col-4">
                 Автомеханик-диагност
               </h3>
-              <p class="vacancy__description">
+              <p class="vacancy__description col-4">
                 Технический эксперт с большим опытом работы, для которого все тайное становится явным
               </p>
-              <div class="vacancy__controls">
-                <button class="vacancy__button btn btn--primary">
-                  Заполнить анкету
-                </button>
+              <div class="vacancy__controls col-4">
+                  <button class="btn btn--primary" aria-controls="modal1">Заполните анкету</button>
               </div>
-          </div>
-          <div class="vacancy__item">
-            <h3 class="vacancy__title">
-              Кладовщик отдела запасных частей
-            </h3>
-            <p class="vacancy__description">
-              Тот самый человек, который знает,
-              где что находится и когда это все закончится
-            </p>
-            <div class="vacancy__controls">
-              <button class="vacancy__button btn btn--primary">
-                Заполнить анкету
-              </button>
             </div>
-          </div>
-          <div class="vacancy__item">
-            <h3 class="vacancy__title">
-              Машинист погрузчика-эвакуатора
-            </h3>
-            <p class="vacancy__description">
-              Ответственный и организованный.
-              Этому человеку можно доверить самое ценное
-            </p>
-            <div class="vacancy__controls">
-              <button class="vacancy__button btn btn--primary">
-                Заполнить анкету
-              </button>
+          </li>
+          <li class="vacancy__item">
+            <div class="vacancy__wrapper">
+              <h3 class="vacancy__title col-4">
+                Кладовщик отдела запасных частей
+              </h3>
+              <p class="vacancy__description col-4">
+                  Тот самый человек, который знает,
+                  где что находится и когда это все закончится
+              </p>
+              <div class="vacancy__controls col-4">
+                  <button class="btn btn--primary" aria-controls="modal1">Заполните анкету</button>
+              </div>
             </div>
-          </div>  
-          <div class="vacancy__item">
-            <h3 class="vacancy__title">
-              Мойщик
-            </h3>
-            <p class="vacancy__description">
-              Из любой машины сделает конфетку
-            </p>
-            <div class="vacancy__controls">
-              <button class="vacancy__button btn btn--primary">
-                Заполнить анкету
-              </button>
+          </li>
+          <li class="vacancy__item">
+            <div class="vacancy__wrapper">
+              <h3 class="vacancy__title col-4">
+                Машинист погрузчика-эвакуатора
+              </h3>
+              <p class="vacancy__description col-4">
+                  Ответственный и организованный.
+                  Этому человеку можно доверить самое ценное
+              </p>
+              <div class="vacancy__controls col-4">
+                  <button class="btn btn--primary" aria-controls="modal1">Заполните анкету</button>
+              </div>
             </div>
-          </div>  
-          <div class="vacancy__item">
-            <h3 class="vacancy__title">
-              Техник склада б/у автомобилей
-            </h3>
-            <p class="vacancy__description">
-              Инициативный и обстоятельный. Тот без, кого работа в автосалоне не возможна.
-            </p>
-            <div class="vacancy__controls">
-              <button class="vacancy__button btn btn--primary">
-                Заполнить анкету
-              </button>
+          </li>
+
+          <li class="vacancy__item">
+            <div class="vacancy__wrapper">
+              <h3 class="vacancy__title col-4">
+                Мойщик
+              </h3>
+              <p class="vacancy__description col-4">
+                Из любой машины сделает конфетку
+              </p>
+              <div class="vacancy__controls col-4">
+                  <button class="btn btn--primary" aria-controls="modal1">Заполните анкету</button>
+              </div>
             </div>
-          </div>  
-        </div>
+          </li>  
+          
+          <li class="vacancy__item">
+            <div class="vacancy__wrapper">
+              <h3 class="vacancy__title col-4">
+                Техник склада б/у автомобилей
+              </h3>
+              <p class="vacancy__description col-4">
+                Инициативный и обстоятельный. Тот без, кого работа в автосалоне не возможна.
+              </p>
+              <div class="vacancy__controls col-4">
+                  <button class="btn btn--primary" aria-controls="modal1">Заполните анкету</button>
+              </div>
+            </div>
+          </li>
+        </ul>
       </section>
 
-      <section class="vacancy-form">
-          <div class="vacancy-form__information">
-            <h2 class="vacancy-form__title title">
-              Карьера в OAV
-            </h2>
-            <p class="vacancy-form__description">
-                Начните историю вашего успеха с нами.
-                Заполните анкету соискателя для участия в кадровом резерве Акселя и отправьте ее, используя данную форму.
-            </p>
-            <div class="vacancy-form__controls">
-              <a href="anketa.doc" class="vacancy-form__link">
-                Анкета кандидата
-              </a>
-            </div>
+      <div class="modal js-modal" id="modal1" data-animation="on">
+          <div class="modal__content max-width-sm padding-sm" role="alertdialog" tabindex="-1" aria-labelledby="modalTitle1" aria-describedby="modalDescription1">
+            <button class="reset modal__close-btn modal__close-btn--sticky js-modal__close">
+              <svg class="icon" viewBox="0 0 20 20"><title>Close modal w  indow</title><polygon points="18.707 2.707 17.293 1.293 10 8.586 2.707 1.293 1.293 2.707 8.586 10 1.293 17.293 2.707 18.707 10 11.414 17.293 18.707 18.707 17.293 11.414 10 18.707 2.707"/></svg>
+            </button>
+        
+            <section class="vacancy-form">
+                <div class="vacancy-form__container container max-width-md">          
+                  <form class="vacancy-form__block form-template-v3">
+                      <fieldset class="vacancy-form__information margin-bottom-md padding-bottom-md border-bottom">
+                        <div class="text-component margin-bottom-md text-center">
+                          <h2 class = "vacancy-form__title title">Карьера в OAV</h2>
+                          <p class="vacancy-form__description">
+                            Начните историю вашего успеха с нами.
+                            Заполните анкету соискателя для участия в кадровом резерве Акселя и отправьте ее, используя данную форму.
+                          </p>
+                          <div class="vacancy-form__controls">
+                            <a href="anketa.doc" class="vacancy-form__link">
+                              Анкета кандидата
+                            </a>
+                          </div>
+                        </div>
+                    
+                        <div class="margin-bottom-xs">
+                          <div class="grid grid-gap-xxs items-center@md">
+                            <div class="col-4@md">
+                              <label class="form-label" for="firstName">Имя</label>
+                            </div>
+                            
+                            <div class="col-8@md">
+                              <input class="form-control width-100%" type="text" name="firstName" id="firstName" required>
+                            </div>
+                          </div>
+                        </div>
+                    
+                        <div class="margin-bottom-xs">
+                          <div class="grid grid-gap-xxs items-center@md">
+                            <div class="col-4@md">
+                              <label class="form-label" for="inputPhone">Номер телефона</label>
+                            </div>
+                            
+                            <div class="col-8@md">
+                              <input class="form-control width-100%" type="text" name="lastName" id="lastName" required>
+                            </div>
+                          </div>
+                        </div>
+                    
+                        <div class="margin-bottom-xs">
+                          <div class="grid grid-gap-xxs items-center@md">
+                            <div class="col-4@md">
+                              <label class="form-label" for="inputEmail">Почта</label>
+                            </div>
+                            
+                            <div class="col-8@md">
+                              <input class="form-control width-100%" type="email" name="inputEmail" id="inputEmail" required>
+                            </div>
+                          </div>
+                        </div>
+                    
+                        <div>
+                          <div class="grid grid-gap-xxs items-center@md">
+                            <div class="col-4@md">
+                              <label class="form-label" for="questionedFile">Заполненная анкета</label>
+                            </div>
+                            
+                            <div class="col-8@md">
+                                <input  id="questionedFile" class="vacancy-form__input width-100%" name="questionedFile" type="file" size="40" accept=".doc,.docx,.pdf,.xls,.xlsx">
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+                              
+                      <div class="text-right">
+                        <button class="btn btn--primary">Отправить</button>
+                      </div>
+                    </form>
+                </div>
+              </section>        
           </div>
-          <form class="vacancy-form__block">
-            <label for="questionedName" class="vacancy-form__label">
-              Имя
-              <input id="questionedName" class="vacancy-form__input" name="questionedName" type="text" >
-            </label>
-            <label class="vacancy-form__label" for="questionedPhone">
-              Номер телефона
-              <input  id="questionedPhone" class="vacancy-form__input" name="questionedPhone" type="text">
-            </label>
-            <label for="questionedEmail" class="vacancy-form__label">
-              Адрес эл.почты
-              <input id="questionedEmail" class="vacancy-form__input" name="questionedEmail" type="email" >
-            </label>
-            <label for="questionedFile" class="vacancy-form__label">
-                Заполненная анкета
-                <input  id="questionedFile" class="vacancy-form__input" name="questionedFile" type="file" size="40" accept=".doc,.docx,.pdf,.xls,.xlsx">
-            </label>
-          </form>
-        </section>
+        </div>
     </main>
 
     <footer class="main-footer">
