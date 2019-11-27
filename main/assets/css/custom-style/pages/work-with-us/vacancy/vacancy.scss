@@ -24,20 +24,65 @@
   font-weight: 600;
 }
 
-
-
-.vacancy__description {
-  margin: 0 16px;
+@include breakpoint(xs) {
+  .vacancy__title {
+    text-align: center;
+    margin-left: 0;
+    min-width: 100%;
+  }
 }
 
-.vacancy__controls {
-  margin: 0 16px;
+@include breakpoint(sm) {
+  .vacancy__title {
+    text-align: left;
+    min-width: auto;
+  }
 }
+
+
+// .vacancy__description {
+//   margin: 0 16px;
+// }
+
+@include breakpoint(xs) {
+  .vacancy__description {
+    text-align: center;
+    margin-left: 0;
+    min-width: 100%;
+  }
+}
+
+@include breakpoint(sm) {
+  .vacancy__description {
+    text-align: left;
+    min-width: auto;
+  }
+}
+
+
+// .vacancy__controls {
+//   margin: 0 16px;
+// }
 
 .vacancy__controls {
   display: flex;
-  justify-content: flex-end;
 }
+
+@include breakpoint(xs) {
+  .vacancy__controls {
+    justify-content: center;
+    margin-left: 0;
+    min-width: 100%;
+  }
+}
+
+@include breakpoint(sm) {
+  .vacancy__controls {
+    justify-content: flex-end;
+    min-width: auto;
+  }
+}
+
 
 // .vacancy-form {
 //     position: absolute;

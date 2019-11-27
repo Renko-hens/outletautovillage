@@ -137,71 +137,71 @@
       <section class="vacancy">
         <ul class="vacancy__list">
           <li class="vacancy__item">
-            <div class="vacancy__wrapper">
-              <h3 class="vacancy__title col-4">
+            <div class="vacancy__wrapper grid grid-gap-md">
+              <h3 class="vacancy__title col-12@xs col-4@sm">
                 Автомеханик-диагност
               </h3>
-              <p class="vacancy__description col-4">
+              <p class="vacancy__description col-12@xs col-4@sm">
                 Технический эксперт с большим опытом работы, для которого все тайное становится явным
               </p>
-              <div class="vacancy__controls col-4">
-                  <button class="btn btn--primary" aria-controls="modal1">Заполните анкету</button>
+              <div class="vacancy__controls col-12@xs col-4@sm">
+                  <button class="btn btn--primary vacancy__button" aria-controls="modal1" onclick="document.getElementById('inputPosition').value='Автомеханик-диагност';">Заполните анкету</button>
               </div>
             </div>
           </li>
           <li class="vacancy__item">
-            <div class="vacancy__wrapper">
-              <h3 class="vacancy__title col-4">
+            <div class="vacancy__wrapper grid grid-gap-md">
+              <h3 class="vacancy__title col-12 col-4@sm">
                 Кладовщик отдела запасных частей
               </h3>
-              <p class="vacancy__description col-4">
+              <p class="vacancy__description col-12 col-4@sm">
                   Тот самый человек, который знает,
                   где что находится и когда это все закончится
               </p>
-              <div class="vacancy__controls col-4">
-                  <button class="btn btn--primary" aria-controls="modal1">Заполните анкету</button>
+              <div class="vacancy__controls col-12 col-4@sm">
+                  <button class="btn btn--primary vacancy__button" aria-controls="modal1" onclick="document.getElementById('inputPosition').value='Кладовщик отдела запасных частей';">Заполните анкету</button>
               </div>
             </div>
           </li>
           <li class="vacancy__item">
-            <div class="vacancy__wrapper">
-              <h3 class="vacancy__title col-4">
+            <div class="vacancy__wrapper grid grid-gap-md">
+              <h3 class="vacancy__title col-12@xs col-4@sm">
                 Машинист погрузчика-эвакуатора
               </h3>
-              <p class="vacancy__description col-4">
+              <p class="vacancy__description col-12 col-4@sm">
                   Ответственный и организованный.
                   Этому человеку можно доверить самое ценное
               </p>
-              <div class="vacancy__controls col-4">
-                  <button class="btn btn--primary" aria-controls="modal1">Заполните анкету</button>
+              <div class="vacancy__controls col-12 col-4@sm">
+                  <button class="btn btn--primary vacancy__button" aria-controls="modal1" onclick="document.getElementById('inputPosition').value='Машинист погрузчика-эвакуатора';">Заполните анкету</button>
               </div>
             </div>
           </li>
 
           <li class="vacancy__item">
-            <div class="vacancy__wrapper">
-              <h3 class="vacancy__title col-4">
+            <div class="vacancy__wrapper grid grid-gap-md">
+              <h3 class="vacancy__title col-12@xs col-4@sm">
                 Мойщик
               </h3>
-              <p class="vacancy__description col-4">
+              <p class="vacancy__description col-12@xs col-4@sm">
                 Из любой машины сделает конфетку
               </p>
-              <div class="vacancy__controls col-4">
-                  <button class="btn btn--primary" aria-controls="modal1">Заполните анкету</button>
+              <div class="vacancy__controls col-12@xs col-4@sm">
+                  <button class="btn btn--primary vacancy__button" aria-controls="modal1" onclick="document.getElementById('inputPosition').value='Мойщик';">Заполните анкету</button>
               </div>
             </div>
           </li>  
           
           <li class="vacancy__item">
-            <div class="vacancy__wrapper">
-              <h3 class="vacancy__title col-4">
+            <div class="vacancy__wrapper grid grid-gap-md">
+              <h3 class="vacancy__title col-12@xs col-4@sm">
                 Техник склада б/у автомобилей
               </h3>
-              <p class="vacancy__description col-4">
+              <p class="vacancy__description col-12@xs col-4@sm">
                 Инициативный и обстоятельный. Тот без, кого работа в автосалоне не возможна.
               </p>
-              <div class="vacancy__controls col-4">
-                  <button class="btn btn--primary" aria-controls="modal1">Заполните анкету</button>
+              <div class="vacancy__controls col-12@xs col-4@sm">
+                  <button class="btn btn--primary vacancy__button" aria-controls="modal1" onclick=" document.querySelector('#inputPosition').value = ('Техник склада б/у автомобилей')">Заполните анкету</button>
               </div>
             </div>
           </li>
@@ -211,83 +211,92 @@
       <div class="modal js-modal" id="modal1" data-animation="on">
           <div class="modal__content max-width-sm padding-sm" role="alertdialog" tabindex="-1" aria-labelledby="modalTitle1" aria-describedby="modalDescription1">
             <button class="reset modal__close-btn modal__close-btn--sticky js-modal__close">
-              <svg class="icon" viewBox="0 0 20 20"><title>Close modal w  indow</title><polygon points="18.707 2.707 17.293 1.293 10 8.586 2.707 1.293 1.293 2.707 8.586 10 1.293 17.293 2.707 18.707 10 11.414 17.293 18.707 18.707 17.293 11.414 10 18.707 2.707"/></svg>
+              <svg class="icon" viewBox="0 0 20 20"><title>Close modal window</title><polygon points="18.707 2.707 17.293 1.293 10 8.586 2.707 1.293 1.293 2.707 8.586 10 1.293 17.293 2.707 18.707 10 11.414 17.293 18.707 18.707 17.293 11.414 10 18.707 2.707"/></svg>
             </button>
         
             <section class="vacancy-form">
                 <div class="vacancy-form__container container max-width-md">          
                   <form class="vacancy-form__block form-template-v3">
-                      <fieldset class="vacancy-form__information margin-bottom-md padding-bottom-md border-bottom">
-                        <div class="text-component margin-bottom-md text-center">
+                      <fieldset class="vacancy-form__information margin-bottom-md border-bottom">
+                        
+                        <div class="text-component margin-bottom-xs text-left">
                           <h2 class = "vacancy-form__title title">Карьера в OAV</h2>
                           <p class="vacancy-form__description">
                             Начните историю вашего успеха с нами.
-                            Заполните анкету соискателя для участия в кадровом резерве Акселя и отправьте ее, используя данную форму.
                           </p>
                           <div class="vacancy-form__controls">
-                            <a href="anketa.doc" class="vacancy-form__link">
-                              Анкета кандидата
+                            <a href="anketa.docx" class="vacancy-form__link btn btn--primary">
+                              Скачать анкету
                             </a>
                           </div>
                         </div>
                     
                         <div class="margin-bottom-xs">
-                          <div class="grid grid-gap-xxs items-center@md">
-                            <div class="col-4@md">
+                          <div class="grid grid-gap-xxxs items-center@md">
+                            <div class="col-12@md">
                               <label class="form-label" for="firstName">Имя</label>
                             </div>
                             
-                            <div class="col-8@md">
-                              <input class="form-control width-100%" type="text" name="firstName" id="firstName" required>
+                            <div class="col-12@md">
+                              <input class="form-control width-100%" type="text" name="firstName" id="firstName">
                             </div>
                           </div>
                         </div>
                     
                         <div class="margin-bottom-xs">
-                          <div class="grid grid-gap-xxs items-center@md">
-                            <div class="col-4@md">
-                              <label class="form-label" for="inputPhone">Номер телефона</label>
+                          <div class="grid grid-gap-xxxs items-center@md">
+                            <div class="col-12@md">
+                              <label class="form-label"for="tel">Номер телефона</label>
                             </div>
                             
-                            <div class="col-8@md">
-                              <input class="form-control width-100%" type="text" name="lastName" id="lastName" required>
+                            <div class="col-12@md">
+                              <input class="form-control width-100%" type="text" name="tel" id="tel">
                             </div>
                           </div>
                         </div>
                     
                         <div class="margin-bottom-xs">
-                          <div class="grid grid-gap-xxs items-center@md">
-                            <div class="col-4@md">
+                          <div class="grid grid-gap-xxxs items-center@md">
+                            <div class="col-12@md">
                               <label class="form-label" for="inputEmail">Почта</label>
                             </div>
                             
-                            <div class="col-8@md">
+                            <div class="col-12@md">
                               <input class="form-control width-100%" type="email" name="inputEmail" id="inputEmail" required>
                             </div>
                           </div>
                         </div>
-                    
-                        <div>
-                          <div class="grid grid-gap-xxs items-center@md">
-                            <div class="col-4@md">
-                              <label class="form-label" for="questionedFile">Заполненная анкета</label>
+
+                        <div class="margin-bottom-xs">
+                          <div class="grid grid-gap-xxxs items-center@md">
+                            <div class="col-12@md">
+                              <label class="form-label" for="inputPosition">Вакансия</label>
                             </div>
                             
-                            <div class="col-8@md">
-                                <input  id="questionedFile" class="vacancy-form__input width-100%" name="questionedFile" type="file" size="40" accept=".doc,.docx,.pdf,.xls,.xlsx">
+                            <div class="col-12@md">
+                              <input class="form-control width-100%" type="text" name="inputPosition" id="inputPosition" value="">
                             </div>
                           </div>
                         </div>
-                      </fieldset>
+
+                        <div class="grid grid-gap-sm margin-top-sm text-left">
+                          <fieldset class="col-3@md file-upload">
+                              <label for="upload1" class="file-upload__label btn btn--subtle">
+                                <span class="file-upload__text file-upload__text--has-max-width">Загрузить анкету</span>
+                              </label>
                               
-                      <div class="text-right">
-                        <button class="btn btn--primary">Отправить</button>
-                      </div>
-                    </form>
+                              <input type="file" class="file-upload__input" name="upload1" id="upload1">
+                          </fieldset>
+
+                          <button class="col-3@md btn btn--primary">Отправить</button>
+                        </div>       
+
+                      </fieldset>
+                  </form>
                 </div>
-              </section>        
+            </section>        
           </div>
-        </div>
+      </div>
     </main>
 
     <footer class="main-footer">
@@ -492,7 +501,7 @@
             </div>
         </div>
     </footer>
-    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/scripts.min.js"></script>
 </body>
 
 </html>

@@ -235,6 +235,250 @@ Math.easeInOutQuad = function (t, b, c, d) {
 	t--;
 	return -c/2 * (t*(t-2) - 1) + b;
 };
+// File#: _1_anim-menu-btn
+(function() {
+	var menuBtns = document.getElementsByClassName('js-anim-menu-btn');
+	if( menuBtns.length > 0 ) {
+		for(var i = 0; i < menuBtns.length; i++) {(function(i){
+			initMenuBtn(menuBtns[i]);
+		})(i);}
+
+		function initMenuBtn(btn) {
+			btn.addEventListener('click', function(event){	
+				event.preventDefault();
+				var status = !Util.hasClass(btn, 'anim-menu-btn--state-b');
+				Util.toggleClass(btn, 'anim-menu-btn--state-b', status);
+				// emit custom event
+				var event = new CustomEvent('anim-menu-btn-clicked', {detail: status});
+				btn.dispatchEvent(event);
+			});
+		};
+	}
+}());
+// File#: _1_file-upload
+// Usage: codyhouse.co/license
+(function() {
+  var InputFile = function(element) {
+    this.element = element;
+    this.input = this.element.getElementsByClassName('file-upload__input')[0];
+    this.label = this.element.getElementsByClassName('file-upload__label')[0];
+    this.multipleUpload = this.input.hasAttribute('multiple'); // allow for multiple files selection
+    
+    // this is the label text element -> when user selects a file, it will be changed from the default value to the name of the file 
+    this.labelText = this.element.getElementsByClassName('file-upload__text')[0];
+    this.initialLabel = this.labelText.textContent;
+
+    initInputFileEvents(this);
+  }; 
+
+  function initInputFileEvents(inputFile) {
+    // make label focusable
+    inputFile.label.setAttribute('tabindex', '0');
+    inputFile.input.setAttribute('tabindex', '-1');
+
+    // move focus from input to label -> this is triggered when a file is selected or the file picker modal is closed
+    inputFile.input.addEventListener('focusin', function(event){ 
+      inputFile.label.focus();
+    });
+
+    // press 'Enter' key on label element -> trigger file selection
+    inputFile.label.addEventListener('keydown', function(event) {
+      if( event.keyCode && event.keyCode == 13 || event.key && event.key.toLowerCase() == 'enter') {inputFile.input.click();}
+    });
+
+    // file has been selected -> update label text
+    inputFile.input.addEventListener('change', function(event){ 
+      updateInputLabelText(inputFile);
+    });
+  };
+
+  function updateInputLabelText(inputFile) {
+    var label = '';
+    if(inputFile.input.files && inputFile.input.files.length < 1) { 
+      label = inputFile.initialLabel; // no selection -> revert to initial label
+    } else if(inputFile.multipleUpload && inputFile.input.files && inputFile.input.files.length > 1) {
+      label = inputFile.input.files.length+ ' files'; // multiple selection -> show number of files
+    } else {
+      label = inputFile.input.value.split('\\').pop(); // single file selection -> show name of the file
+    }
+    inputFile.labelText.textContent = label;
+  };
+
+  //initialize the InputFile objects
+  var inputFiles = document.getElementsByClassName('file-upload');
+  if( inputFiles.length > 0 ) {
+    for( var i = 0; i < inputFiles.length; i++) {
+      (function(i){new InputFile(inputFiles[i]);})(i);
+    }
+  }
+}());
+// File#: _1_modal-window
+// Usage: codyhouse.co/license
+(function() {
+  var Modal = function(element) {
+    this.element = element;
+    this.triggers = document.querySelectorAll('[aria-controls="'+this.element.getAttribute('id')+'"]');
+    this.firstFocusable = null;
+    this.lastFocusable = null;
+    this.selectedTrigger = null;
+    this.showClass = "modal--is-visible";
+    this.initModal();
+  };
+
+  Modal.prototype.initModal = function() {
+    var self = this;
+    //open modal when clicking on trigger buttons
+    if ( this.triggers ) {
+      for(var i = 0; i < this.triggers.length; i++) {
+        this.triggers[i].addEventListener('click', function(event) {
+          event.preventDefault();
+          self.selectedTrigger = event.target;
+          self.showModal();
+          self.initModalEvents();
+        });
+      }
+    }
+
+    // listen to the openModal event -> open modal without a trigger button
+    this.element.addEventListener('openModal', function(event){
+      if(event.detail) self.selectedTrigger = event.detail;
+      self.showModal();
+      self.initModalEvents();
+    });
+
+    // listen to the closeModal event -> close modal without a trigger button
+    this.element.addEventListener('closeModal', function(event){
+      if(event.detail) self.selectedTrigger = event.detail;
+      self.closeModal();
+    });
+  };
+
+  Modal.prototype.showModal = function() {
+    var self = this;
+    Util.addClass(this.element, this.showClass);
+    this.getFocusableElements();
+    this.firstFocusable.focus();
+    // wait for the end of transitions before moving focus
+    this.element.addEventListener("transitionend", function cb(event) {
+      self.firstFocusable.focus();
+      self.element.removeEventListener("transitionend", cb);
+    });
+    this.emitModalEvents('modalIsOpen');
+  };
+
+  Modal.prototype.closeModal = function() {
+    if(!Util.hasClass(this.element, this.showClass)) return;
+    Util.removeClass(this.element, this.showClass);
+    this.firstFocusable = null;
+    this.lastFocusable = null;
+    if(this.selectedTrigger) this.selectedTrigger.focus();
+    //remove listeners
+    this.cancelModalEvents();
+    this.emitModalEvents('modalIsClose');
+  };
+
+  Modal.prototype.initModalEvents = function() {
+    //add event listeners
+    this.element.addEventListener('keydown', this);
+    this.element.addEventListener('click', this);
+  };
+
+  Modal.prototype.cancelModalEvents = function() {
+    //remove event listeners
+    this.element.removeEventListener('keydown', this);
+    this.element.removeEventListener('click', this);
+  };
+
+  Modal.prototype.handleEvent = function (event) {
+    switch(event.type) {
+      case 'click': {
+        this.initClick(event);
+      }
+      case 'keydown': {
+        this.initKeyDown(event);
+      }
+    }
+  };
+
+  Modal.prototype.initKeyDown = function(event) {
+    if( event.keyCode && event.keyCode == 9 || event.key && event.key == 'Tab' ) {
+      //trap focus inside modal
+      this.trapFocus(event);
+    } else if( (event.keyCode && event.keyCode == 13 || event.key && event.key == 'Enter') && event.target.closest('.js-modal__close')) {
+      event.preventDefault();
+      this.closeModal(); // close modal when pressing Enter on close button
+    }	
+  };
+
+  Modal.prototype.initClick = function(event) {
+    //close modal when clicking on close button or modal bg layer 
+    if( !event.target.closest('.js-modal__close') && !Util.hasClass(event.target, 'js-modal') ) return;
+    event.preventDefault();
+    this.closeModal();
+  };
+
+  Modal.prototype.trapFocus = function(event) {
+    if( this.firstFocusable == document.activeElement && event.shiftKey) {
+      //on Shift+Tab -> focus last focusable element when focus moves out of modal
+      event.preventDefault();
+      this.lastFocusable.focus();
+    }
+    if( this.lastFocusable == document.activeElement && !event.shiftKey) {
+      //on Tab -> focus first focusable element when focus moves out of modal
+      event.preventDefault();
+      this.firstFocusable.focus();
+    }
+  }
+
+  Modal.prototype.getFocusableElements = function() {
+    //get all focusable elements inside the modal
+    var allFocusable = this.element.querySelectorAll('[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex]:not([tabindex="-1"]), [contenteditable], audio[controls], video[controls], summary');
+    this.getFirstVisible(allFocusable);
+    this.getLastVisible(allFocusable);
+  };
+
+  Modal.prototype.getFirstVisible = function(elements) {
+    //get first visible focusable element inside the modal
+    for(var i = 0; i < elements.length; i++) {
+      if( elements[i].offsetWidth || elements[i].offsetHeight || elements[i].getClientRects().length ) {
+        this.firstFocusable = elements[i];
+        return true;
+      }
+    }
+  };
+
+  Modal.prototype.getLastVisible = function(elements) {
+    //get last visible focusable element inside the modal
+    for(var i = elements.length - 1; i >= 0; i--) {
+      if( elements[i].offsetWidth || elements[i].offsetHeight || elements[i].getClientRects().length ) {
+        this.lastFocusable = elements[i];
+        return true;
+      }
+    }
+  };
+
+  Modal.prototype.emitModalEvents = function(eventName) {
+    var event = new CustomEvent(eventName, {detail: this.selectedTrigger});
+    this.element.dispatchEvent(event);
+  };
+
+  //initialize the Modal objects
+  var modals = document.getElementsByClassName('js-modal');
+  if( modals.length > 0 ) {
+    var modalArrays = [];
+    for( var i = 0; i < modals.length; i++) {
+      (function(i){modalArrays.push(new Modal(modals[i]));})(i);
+    }
+
+    window.addEventListener('keydown', function(event){ //close modal window on esc
+      if(event.keyCode && event.keyCode == 27 || event.key && event.key.toLowerCase() == 'escape') {
+        for( var i = 0; i < modalArrays.length; i++) {
+          (function(i){modalArrays[i].closeModal();})(i);
+        };
+      }
+    });
+  }
+}());
 // $(function () {                                      
 //     $('.b-secondary-nav.navigation__item a').each(function () {             
 //         var location = window.location.href; 
@@ -517,193 +761,41 @@ Math.easeInOutQuad = function (t, b, c, d) {
 //   });
 //   return o;
 // };
-// File#: _1_anim-menu-btn
-(function() {
-	var menuBtns = document.getElementsByClassName('js-anim-menu-btn');
-	if( menuBtns.length > 0 ) {
-		for(var i = 0; i < menuBtns.length; i++) {(function(i){
-			initMenuBtn(menuBtns[i]);
-		})(i);}
+var inputPhone = document.querySelector("#tel");
 
-		function initMenuBtn(btn) {
-			btn.addEventListener('click', function(event){	
-				event.preventDefault();
-				var status = !Util.hasClass(btn, 'anim-menu-btn--state-b');
-				Util.toggleClass(btn, 'anim-menu-btn--state-b', status);
-				// emit custom event
-				var event = new CustomEvent('anim-menu-btn-clicked', {detail: status});
-				btn.dispatchEvent(event);
-			});
-		};
-	}
-}());
-// File#: _1_modal-window
-// Usage: codyhouse.co/license
-(function() {
-  var Modal = function(element) {
-    this.element = element;
-    this.triggers = document.querySelectorAll('[aria-controls="'+this.element.getAttribute('id')+'"]');
-    this.firstFocusable = null;
-    this.lastFocusable = null;
-    this.selectedTrigger = null;
-    this.showClass = "modal--is-visible";
-    this.initModal();
-  };
-
-  Modal.prototype.initModal = function() {
-    var self = this;
-    //open modal when clicking on trigger buttons
-    if ( this.triggers ) {
-      for(var i = 0; i < this.triggers.length; i++) {
-        this.triggers[i].addEventListener('click', function(event) {
-          event.preventDefault();
-          self.selectedTrigger = event.target;
-          self.showModal();
-          self.initModalEvents();
-        });
-      }
-    }
-
-    // listen to the openModal event -> open modal without a trigger button
-    this.element.addEventListener('openModal', function(event){
-      if(event.detail) self.selectedTrigger = event.detail;
-      self.showModal();
-      self.initModalEvents();
-    });
-
-    // listen to the closeModal event -> close modal without a trigger button
-    this.element.addEventListener('closeModal', function(event){
-      if(event.detail) self.selectedTrigger = event.detail;
-      self.closeModal();
-    });
-  };
-
-  Modal.prototype.showModal = function() {
-    var self = this;
-    Util.addClass(this.element, this.showClass);
-    this.getFocusableElements();
-    this.firstFocusable.focus();
-    // wait for the end of transitions before moving focus
-    this.element.addEventListener("transitionend", function cb(event) {
-      self.firstFocusable.focus();
-      self.element.removeEventListener("transitionend", cb);
-    });
-    this.emitModalEvents('modalIsOpen');
-  };
-
-  Modal.prototype.closeModal = function() {
-    if(!Util.hasClass(this.element, this.showClass)) return;
-    Util.removeClass(this.element, this.showClass);
-    this.firstFocusable = null;
-    this.lastFocusable = null;
-    if(this.selectedTrigger) this.selectedTrigger.focus();
-    //remove listeners
-    this.cancelModalEvents();
-    this.emitModalEvents('modalIsClose');
-  };
-
-  Modal.prototype.initModalEvents = function() {
-    //add event listeners
-    this.element.addEventListener('keydown', this);
-    this.element.addEventListener('click', this);
-  };
-
-  Modal.prototype.cancelModalEvents = function() {
-    //remove event listeners
-    this.element.removeEventListener('keydown', this);
-    this.element.removeEventListener('click', this);
-  };
-
-  Modal.prototype.handleEvent = function (event) {
-    switch(event.type) {
-      case 'click': {
-        this.initClick(event);
-      }
-      case 'keydown': {
-        this.initKeyDown(event);
-      }
-    }
-  };
-
-  Modal.prototype.initKeyDown = function(event) {
-    if( event.keyCode && event.keyCode == 9 || event.key && event.key == 'Tab' ) {
-      //trap focus inside modal
-      this.trapFocus(event);
-    } else if( (event.keyCode && event.keyCode == 13 || event.key && event.key == 'Enter') && event.target.closest('.js-modal__close')) {
-      event.preventDefault();
-      this.closeModal(); // close modal when pressing Enter on close button
-    }	
-  };
-
-  Modal.prototype.initClick = function(event) {
-    //close modal when clicking on close button or modal bg layer 
-    if( !event.target.closest('.js-modal__close') && !Util.hasClass(event.target, 'js-modal') ) return;
-    event.preventDefault();
-    this.closeModal();
-  };
-
-  Modal.prototype.trapFocus = function(event) {
-    if( this.firstFocusable == document.activeElement && event.shiftKey) {
-      //on Shift+Tab -> focus last focusable element when focus moves out of modal
-      event.preventDefault();
-      this.lastFocusable.focus();
-    }
-    if( this.lastFocusable == document.activeElement && !event.shiftKey) {
-      //on Tab -> focus first focusable element when focus moves out of modal
-      event.preventDefault();
-      this.firstFocusable.focus();
-    }
-  }
-
-  Modal.prototype.getFocusableElements = function() {
-    //get all focusable elements inside the modal
-    var allFocusable = this.element.querySelectorAll('[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex]:not([tabindex="-1"]), [contenteditable], audio[controls], video[controls], summary');
-    this.getFirstVisible(allFocusable);
-    this.getLastVisible(allFocusable);
-  };
-
-  Modal.prototype.getFirstVisible = function(elements) {
-    //get first visible focusable element inside the modal
-    for(var i = 0; i < elements.length; i++) {
-      if( elements[i].offsetWidth || elements[i].offsetHeight || elements[i].getClientRects().length ) {
-        this.firstFocusable = elements[i];
-        return true;
-      }
-    }
-  };
-
-  Modal.prototype.getLastVisible = function(elements) {
-    //get last visible focusable element inside the modal
-    for(var i = elements.length - 1; i >= 0; i--) {
-      if( elements[i].offsetWidth || elements[i].offsetHeight || elements[i].getClientRects().length ) {
-        this.lastFocusable = elements[i];
-        return true;
-      }
-    }
-  };
-
-  Modal.prototype.emitModalEvents = function(eventName) {
-    var event = new CustomEvent(eventName, {detail: this.selectedTrigger});
-    this.element.dispatchEvent(event);
-  };
-
-  //initialize the Modal objects
-  var modals = document.getElementsByClassName('js-modal');
-  if( modals.length > 0 ) {
-    var modalArrays = [];
-    for( var i = 0; i < modals.length; i++) {
-      (function(i){modalArrays.push(new Modal(modals[i]));})(i);
-    }
-
-    window.addEventListener('keydown', function(event){ //close modal window on esc
-      if(event.keyCode && event.keyCode == 27 || event.key && event.key.toLowerCase() == 'escape') {
-        for( var i = 0; i < modalArrays.length; i++) {
-          (function(i){modalArrays[i].closeModal();})(i);
+if (inputPhone) {
+    window.addEventListener("DOMContentLoaded", function() {
+        function setCursorPosition(pos, elem) {
+            elem.focus();
+            if (elem.setSelectionRange) elem.setSelectionRange(pos, pos);
+            else if (elem.createTextRange) {
+                var range = elem.createTextRange();
+                range.collapse(true);
+                range.moveEnd("character", pos);
+                range.moveStart("character", pos);
+                range.select();
+            }
+        }
+         
+        function mask(event) {
+            var matrix = "+7 (___) ___ ____",
+                i = 0,
+                def = matrix.replace(/\D/g, ""),
+                val = this.value.replace(/\D/g, "");
+            if (def.length >= val.length) val = def;
+            this.value = matrix.replace(/./g, function(a) {
+                return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a
+            });
+            if (event.type == "blur") {
+                if (this.value.length == 2) this.value = ""
+            } else setCursorPosition(this.value.length, this)
         };
-      }
-    });
-  }
-}());
+            var input = document.querySelector("#tel");
+            input.addEventListener("input", mask, false);
+            input.addEventListener("focus", mask, false);
+            input.addEventListener("blur", mask, false);
+        });
+}
 // По клику на кнопку "меню" меняется класс у навигации
 var 
     bodyElement = document.querySelector('body');
